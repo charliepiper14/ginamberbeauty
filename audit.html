@@ -1,0 +1,3094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gin Amber Beauty - Meta Ads Deep Audit & Funnel Review</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #162642;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 12px;
+            padding: 60px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-height: 600px;
+            page-break-after: always;
+        }
+
+        .slide-header {
+            border-bottom: 4px solid #cc5b27;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #162642;
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #162642;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #cc5b27;
+            font-size: 24px;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #162642;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #162642 0%, #1e3a5f 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .metric-card.accent {
+            background: linear-gradient(135deg, #cc5b27 0%, #e06a2f 100%);
+        }
+
+        .metric-card.success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .metric-card.warning {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .metric-card.danger {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+
+        .metric-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .metric-change {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .metric-change.positive {
+            color: #4ade80;
+        }
+
+        .metric-change.negative {
+            color: #ff6b6b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            font-size: 14px;
+        }
+
+        thead {
+            background: #162642;
+            color: white;
+        }
+
+        th {
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tr:hover {
+            background: #f9fafb;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .status-good {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-warning {
+            background: #fed7aa;
+            color: #92400e;
+        }
+
+        .status-critical {
+            background: #fecaca;
+            color: #991b1b;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .insight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #cc5b27;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .insight-box strong {
+            color: #cc5b27;
+        }
+
+        .action-item {
+            background: white;
+            border: 2px solid #162642;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .action-item h4 {
+            color: #cc5b27;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .priority-high {
+            border-left: 6px solid #dc2626;
+        }
+
+        .priority-medium {
+            border-left: 6px solid #f59e0b;
+        }
+
+        .priority-low {
+            border-left: 6px solid #10b981;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 10px;
+        }
+
+        .badge-meta {
+            background: #1877f2;
+            color: white;
+        }
+
+        .badge-cro {
+            background: #10b981;
+            color: white;
+        }
+
+        .funnel-stage {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 6px;
+        }
+
+        .funnel-stage strong {
+            color: #92400e;
+        }
+
+        .funnel-table {
+            background: #f8fafc;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .funnel-row {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .funnel-row:last-child {
+            border-bottom: none;
+        }
+
+        .funnel-metric {
+            flex: 1;
+            font-weight: 600;
+        }
+
+        .funnel-value {
+            flex: 1;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: #162642;
+        }
+
+        .funnel-kpi {
+            flex: 1;
+            text-align: right;
+        }
+
+        .kpi-good {
+            color: #059669;
+        }
+
+        .kpi-warning {
+            color: #d97706;
+        }
+
+        .kpi-bad {
+            color: #dc2626;
+        }
+
+        .cro-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .cro-box strong {
+            color: #059669;
+        }
+
+        @media print {
+            .slide {
+                page-break-after: always;
+                margin: 0;
+                box-shadow: none;
+            }
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        
+        <!-- SLIDE 1: COVER -->
+        <div class="slide" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #162642;">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo" style="width: 300px; margin-bottom: 40px;">
+            <h1 style="font-size: 48px; margin-bottom: 20px; color: white;">Meta Ads Deep Audit</h1>
+            <h1 style="font-size: 48px; margin-bottom: 20px; color: white;">Funnel Review & CRO Analysis</h1>
+            <p class="subtitle" style="font-size: 28px; color: #cc5b27; margin-bottom: 30px;">Gin Amber Beauty</p>
+            <p class="subtitle" style="font-size: 22px; color: white;">Performance Review: October 29 to November 27, 2025</p>
+            <p class="subtitle" style="font-size: 18px; color: rgba(255,255,255,0.7); margin-top: 20px;">Home of Real Dermarollers with Real Individual Needles</p>
+        </div>
+
+        <!-- SLIDE 2: EXECUTIVE SUMMARY -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>Executive Summary</h2>
+            </div>
+
+            <div style="background: #fef3c7; border-left: 6px solid #f59e0b; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #92400e;">Overall Account Health: <span style="color: #d97706;">REQUIRES OPTIMISATION</span></h3>
+                <p style="font-size: 18px; line-height: 1.6; color: #92400e;">Your account is generating solid revenue but operating below target profitability. The current 2.75x ROAS sits above the 1.8x breakeven discussed during onboarding, however it remains significantly below the 4 to 4.5x target required for 20 percent net profit. The encouraging news is that your retargeting and BOF campaigns are delivering strong results at 4 to 7x ROAS, which proves the model works when executed correctly. The challenge lies in prospecting campaigns diluting overall performance. Strategic restructuring combined with CRO improvements can unlock the profitability you are looking for.</p>
+            </div>
+
+            <h3>Account Overview (30 Day Period)</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Ad Spend</div>
+                    <div class="metric-value">$54,203</div>
+                    <div class="metric-change">Includes Black Friday period</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Total Purchases</div>
+                    <div class="metric-value">1,413</div>
+                    <div class="metric-change">Strong conversion volume</div>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-label">Blended ROAS</div>
+                    <div class="metric-value">2.75x</div>
+                    <div class="metric-change">Target: 4.0 to 4.5x for 20% profit</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Blended CPA</div>
+                    <div class="metric-value">$38.36</div>
+                    <div class="metric-change">AOV: $105.48</div>
+                </div>
+            </div>
+
+            <h3>Key Performance Metrics</h3>
+            <div class="metric-grid">
+                <div class="metric-card success">
+                    <div class="metric-label">Total Revenue</div>
+                    <div class="metric-value">$149,040</div>
+                    <div class="metric-change">Black Friday boost included</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Average Order Value</div>
+                    <div class="metric-value">$105.48</div>
+                    <div class="metric-change">Elevated from $75.36 baseline (Black Friday bundles)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Website Conversion Rate</div>
+                    <div class="metric-value">8.80%</div>
+                    <div class="metric-change">LPV to Purchase</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">CPM</div>
+                    <div class="metric-value">$36.23</div>
+                    <div class="metric-change">Reasonable for skincare niche</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Main Wins</h3>
+            <ul>
+                <li><strong>BOF (Bottom of Funnel) campaigns performing excellently:</strong> Two BOF ad sets delivering 4.52x and 4.57x ROAS at $24 to $25 CPA. These represent your most profitable segments.</li>
+                <li><strong>All Time Buyers retargeting is exceptional:</strong> 6.08x ROAS with $23.57 CPA from repeat customer targeting. This validates your LTV and customer loyalty.</li>
+                <li><strong>Creative 1 is a standout performer:</strong> Generating 7.19x ROAS across BOF placements with just $16.73 CPA.</li>
+                <li><strong>EBF (Early Black Friday) campaigns performing well:</strong> 3.66 to 3.85x ROAS showing seasonal strategy is working effectively.</li>
+                <li><strong>Strong website conversion rate:</strong> 8.80 percent LPV to purchase is excellent for ecommerce.</li>
+                <li><strong>AOV boost during sale period:</strong> $105.48 versus typical $75 to $80 shows bundles and upsells are working.</li>
+            </ul>
+
+            <h3 style="margin-top: 40px;">Pain Points and Critical Issues</h3>
+            <ul>
+                <li><strong>ABO Test campaign underperforming significantly:</strong> $14,541 spend with only 1.58x ROAS. This single campaign is dragging down overall account performance.</li>
+                <li><strong>CBO Best Ads not living up to its name:</strong> $9,095 spend at 1.85x ROAS. Despite the naming, these ads are not delivering expected results.</li>
+                <li><strong>Click to LPV drop at 10.56 percent:</strong> Losing visitors between click and landing page load indicates potential page speed or tracking issues.</li>
+                <li><strong>Checkout abandonment at 64 percent:</strong> Only 35.93 percent of initiated checkouts complete. This represents significant lost revenue.</li>
+                <li><strong>TOF (Top of Funnel) BFCM campaign struggling:</strong> 1.69x ROAS on cold traffic prospecting requires attention.</li>
+                <li><strong>Lack of structured campaign naming:</strong> Inconsistent naming conventions make optimisation difficult to track.</li>
+            </ul>
+
+            <div class="insight-box">
+                <strong>Bottom Line:</strong> Your retargeting and bottom of funnel strategy is working beautifully. The issue is that prospecting campaigns are consuming budget without delivering proportional returns. By pausing or restructuring underperformers and scaling winners, combined with the CRO improvements outlined in this report, you can realistically achieve 3.5 to 4x blended ROAS within 60 days, putting you on track for that 20 percent net profit target.
+            </div>
+        </div>
+
+        <!-- SLIDE 3: 90-DAY ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>90 Day Performance Analysis</h2>
+                <p class="subtitle">Evergreen Baseline: August 30 to November 28, 2025</p>
+            </div>
+
+            <div style="background: #f0f9ff; border-left: 6px solid #3b82f6; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #1e40af;">Why 90 Days Matters</h3>
+                <p style="font-size: 16px; line-height: 1.6; color: #1e40af;">The 30 day snapshot includes Black Friday which inflates performance metrics temporarily. This 90 day view provides a more representative baseline of evergreen performance, revealing the true state of the account and where structural improvements are needed.</p>
+            </div>
+
+            <h3>90 Day Account Overview</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Ad Spend (90 Days)</div>
+                    <div class="metric-value">$119,847</div>
+                    <div class="metric-change">~$1,332/day average</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Total Revenue</div>
+                    <div class="metric-value">$265,163</div>
+                    <div class="metric-change">2,686 purchases</div>
+                </div>
+                <div class="metric-card danger">
+                    <div class="metric-label">Blended ROAS</div>
+                    <div class="metric-value">2.21x</div>
+                    <div class="metric-change">Below 30 day (2.75x) due to BF boost</div>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-label">Blended CPA</div>
+                    <div class="metric-value">$44.62</div>
+                    <div class="metric-change">Target: Under $35</div>
+                </div>
+            </div>
+
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">CTR</div>
+                    <div class="metric-value">1.18%</div>
+                    <div class="metric-change">Consistent with 30 day</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">CPC</div>
+                    <div class="metric-value">$2.82</div>
+                    <div class="metric-change">Reasonable for niche</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">CPM</div>
+                    <div class="metric-value">$33.19</div>
+                    <div class="metric-change">Lower than BF period</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Reach</div>
+                    <div class="metric-value">651,344</div>
+                    <div class="metric-change">5.5x frequency</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">90 Day Funnel Conversion Rates</h3>
+            <div class="two-column">
+                <div>
+                    <div class="funnel-stage">
+                        <strong>Click to LPV:</strong> 87.54%<br>
+                        <span style="color: #059669;">Significantly better than 30 day (89.44%)</span><br>
+                        <small>12.46% drop rate is within acceptable range</small>
+                    </div>
+                    <div class="funnel-stage">
+                        <strong>LPV to ATC:</strong> 37.93%<br>
+                        <span style="color: #059669;">Excellent engagement</span><br>
+                        <small>Lower than 30 day (48%) but still strong</small>
+                    </div>
+                </div>
+                <div>
+                    <div class="funnel-stage">
+                        <strong>ATC to IC:</strong> 54.97%<br>
+                        <span style="color: #059669;">Very strong cart to checkout</span><br>
+                        <small>Similar to 30 day (50.94%)</small>
+                    </div>
+                    <div class="funnel-stage" style="background: #fee2e2; border-left-color: #dc2626;">
+                        <strong>IC to Purchase:</strong> 34.68%<br>
+                        <span style="color: #dc2626;">Primary opportunity</span><br>
+                        <small>65% checkout abandonment = biggest revenue leak</small>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">90 Day Campaign Performance</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Revenue</th>
+                        <th>Purchases</th>
+                        <th>ROAS</th>
+                        <th>CPA</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>18.06 | ABO Test</strong></td>
+                        <td>$61,438</td>
+                        <td>$99,331</td>
+                        <td>1,116</td>
+                        <td><span class="status-badge critical">1.62x</span></td>
+                        <td>$55.05</td>
+                        <td>51% of budget, underperforming</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>18.03 | Retargeting</strong></td>
+                        <td>$19,504</td>
+                        <td>$58,388</td>
+                        <td>559</td>
+                        <td><span class="status-badge good">2.99x</span></td>
+                        <td>$34.89</td>
+                        <td>Strong performer</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>13.11 | ABO | EBF</strong></td>
+                        <td>$12,139</td>
+                        <td>$46,963</td>
+                        <td>411</td>
+                        <td><span class="status-badge good">3.87x</span></td>
+                        <td>$29.53</td>
+                        <td>Excellent, scale candidate</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>20.10 | CBO | Best Ads</strong></td>
+                        <td>$11,279</td>
+                        <td>$19,753</td>
+                        <td>207</td>
+                        <td><span class="status-badge warning">1.75x</span></td>
+                        <td>$54.49</td>
+                        <td>Review and restructure</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>13.11 | CBO | EBF</strong></td>
+                        <td>$5,582</td>
+                        <td>$20,465</td>
+                        <td>187</td>
+                        <td><span class="status-badge good">3.67x</span></td>
+                        <td>$29.85</td>
+                        <td>Strong performer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10.11 | CBO | Winners</strong></td>
+                        <td>$5,550</td>
+                        <td>$13,666</td>
+                        <td>134</td>
+                        <td><span class="status-badge warning">2.46x</span></td>
+                        <td>$41.42</td>
+                        <td>Moderate, monitor</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>17.07 | CBO Campaign</strong></td>
+                        <td>$2,972</td>
+                        <td>$3,585</td>
+                        <td>44</td>
+                        <td><span class="status-badge critical">1.21x</span></td>
+                        <td>$67.55</td>
+                        <td>Inactive, poor performance</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>90 Day Key Insight:</strong> The 18.06 ABO Test campaign has consumed 51% of the entire 90 day budget ($61,438) while delivering only 1.62x ROAS. This single campaign is the primary reason for below target account performance. Pausing or dramatically restructuring this campaign alone could improve blended ROAS by 0.4 to 0.6x.
+            </div>
+        </div>
+
+        <!-- SLIDE 4: 90-DAY AD SET & AD PERFORMANCE -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>90 Day Ad Set and Creative Performance</h2>
+                <p class="subtitle">Identifying Winners and Underperformers</p>
+            </div>
+
+            <h3>Top Performing Ad Sets (90 Days, Min $500 Spend)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>ROAS</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>BOF (Retargeting)</strong></td>
+                        <td>$6,612</td>
+                        <td><span class="status-badge good">4.61x</span></td>
+                        <td>262</td>
+                        <td>$25.24</td>
+                        <td>Scale aggressively</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>BOF (Secondary)</strong></td>
+                        <td>$3,564</td>
+                        <td><span class="status-badge good">4.51x</span></td>
+                        <td>145</td>
+                        <td>$24.58</td>
+                        <td>Scale aggressively</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>All Time Buyers</strong></td>
+                        <td>$9,743</td>
+                        <td><span class="status-badge good">3.53x</span></td>
+                        <td>306</td>
+                        <td>$31.84</td>
+                        <td>Scale moderately</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>MOF</strong></td>
+                        <td>$4,577</td>
+                        <td><span class="status-badge good">3.27x</span></td>
+                        <td>132</td>
+                        <td>$34.67</td>
+                        <td>Scale moderately</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ATC/IC/WV (pf) - 60</strong></td>
+                        <td>$9,761</td>
+                        <td><span class="status-badge warning">2.46x</span></td>
+                        <td>253</td>
+                        <td>$38.58</td>
+                        <td>Optimise creatives</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Underperforming Ad Sets (Requiring Action)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>ROAS</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>05.11 | Marionete Lines - R</strong></td>
+                        <td>$506</td>
+                        <td><span class="status-badge critical">0.65x</span></td>
+                        <td>6</td>
+                        <td>$84.42</td>
+                        <td>Pause immediately</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>19.09 | Batch 2</strong></td>
+                        <td>$709</td>
+                        <td><span class="status-badge critical">1.06x</span></td>
+                        <td>10</td>
+                        <td>$70.94</td>
+                        <td>Pause</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>14.08 | New Insta 2</strong></td>
+                        <td>$1,489</td>
+                        <td><span class="status-badge critical">1.07x</span></td>
+                        <td>21</td>
+                        <td>$70.88</td>
+                        <td>Pause</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>CBO | Best Ads</strong></td>
+                        <td>$2,972</td>
+                        <td><span class="status-badge critical">1.21x</span></td>
+                        <td>44</td>
+                        <td>$67.55</td>
+                        <td>Restructure completely</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>17.09 | Gab + Influencer</strong></td>
+                        <td>$6,317</td>
+                        <td><span class="status-badge warning">1.50x</span></td>
+                        <td>99</td>
+                        <td>$63.81</td>
+                        <td>Reduce budget, test new creatives</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Top Performing Ads (90 Days, Min $300 Spend)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Name</th>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>ROAS</th>
+                        <th>Purchases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 1</strong></td>
+                        <td>BOF</td>
+                        <td>$1,223</td>
+                        <td><span class="status-badge good">7.18x</span></td>
+                        <td>73</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 1</strong></td>
+                        <td>MOF</td>
+                        <td>$1,248</td>
+                        <td><span class="status-badge good">6.38x</span></td>
+                        <td>59</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 1</strong></td>
+                        <td>BOF</td>
+                        <td>$1,635</td>
+                        <td><span class="status-badge good">5.98x</span></td>
+                        <td>90</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 2</strong></td>
+                        <td>BOF</td>
+                        <td>$526</td>
+                        <td><span class="status-badge good">5.36x</span></td>
+                        <td>26</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Restock new</strong></td>
+                        <td>All Time Buyers</td>
+                        <td>$4,733</td>
+                        <td><span class="status-badge good">3.97x</span></td>
+                        <td>139</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Restock</strong></td>
+                        <td>All Time Buyers</td>
+                        <td>$3,284</td>
+                        <td><span class="status-badge good">3.27x</span></td>
+                        <td>126</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Underperforming Ads (Pause or Replace)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Name</th>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>ROAS</th>
+                        <th>Purchases</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>Marionete Lines</strong></td>
+                        <td>05.11 | Marionete Lines</td>
+                        <td>$506</td>
+                        <td><span class="status-badge critical">0.65x</span></td>
+                        <td>6</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>IG GAB3 Mini</strong></td>
+                        <td>CBO | Best Ads</td>
+                        <td>$1,933</td>
+                        <td><span class="status-badge critical">0.84x</span></td>
+                        <td>20</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>Live</strong></td>
+                        <td>05.11 | Live</td>
+                        <td>$492</td>
+                        <td><span class="status-badge critical">0.94x</span></td>
+                        <td>8</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>Vid Influencer</strong></td>
+                        <td>10.11 | Winners</td>
+                        <td>$626</td>
+                        <td><span class="status-badge critical">1.03x</span></td>
+                        <td>10</td>
+                    </tr>
+                    <tr style="background: #fee2e2;">
+                        <td><strong>New Insta 2</strong></td>
+                        <td>14.08 | New Insta 2</td>
+                        <td>$1,489</td>
+                        <td><span class="status-badge critical">1.07x</span></td>
+                        <td>21</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Creative Insight:</strong> CREATIVE 1 is the clear winner across multiple placements (BOF, MOF) delivering 5.98x to 7.18x ROAS. The Restock ads for All Time Buyers also perform exceptionally well at 3.27x to 3.97x ROAS. In contrast, influencer content and some Instagram specific creatives are significantly underperforming. Focus creative testing on formats similar to CREATIVE 1 and Restock style ads.
+            </div>
+        </div>
+
+        <!-- SLIDE 5: FUNNEL ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Funnel Analysis</h2>
+                <p class="subtitle">30 Day Performance Breakdown (Oct 29 to Nov 27, 2025)</p>
+            </div>
+
+            <h3>Complete Funnel Metrics</h3>
+            
+            <div class="funnel-table" style="margin: 30px 0;">
+                <div class="funnel-row" style="background: #162642; color: white;">
+                    <div class="funnel-metric">Metric</div>
+                    <div class="funnel-value">Data</div>
+                    <div class="funnel-kpi" style="color: white;">KPI Status</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Spend</div>
+                    <div class="funnel-value">$54,203.36</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">CPM</div>
+                    <div class="funnel-value">$36.23</div>
+                    <div class="funnel-kpi kpi-good">Good for niche</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Impressions</div>
+                    <div class="funnel-value">1,496,255</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">CTR</div>
+                    <div class="funnel-value">1.20%</div>
+                    <div class="funnel-kpi kpi-warning">Target: 1.5% plus</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Link Clicks</div>
+                    <div class="funnel-value">17,948</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row" style="background: #fef3c7;">
+                    <div class="funnel-metric"><strong>Click to LPV Drop</strong></div>
+                    <div class="funnel-value" style="color: #dc2626;">10.56%</div>
+                    <div class="funnel-kpi kpi-warning">Target: 5 to 8%</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Landing Page Views (LPV)</div>
+                    <div class="funnel-value">16,052</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Add to Cart (ATC)</div>
+                    <div class="funnel-value">7,721</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row" style="background: #d1fae5;">
+                    <div class="funnel-metric"><strong>LPV to ATC Rate</strong></div>
+                    <div class="funnel-value" style="color: #059669;">48.10%</div>
+                    <div class="funnel-kpi kpi-good">Excellent (Target: 10%)</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Initiate Checkout (IC)</div>
+                    <div class="funnel-value">3,933</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row" style="background: #d1fae5;">
+                    <div class="funnel-metric"><strong>ATC to IC Rate</strong></div>
+                    <div class="funnel-value" style="color: #059669;">50.94%</div>
+                    <div class="funnel-kpi kpi-good">Excellent (Target: 30%)</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Purchases</div>
+                    <div class="funnel-value">1,413</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row" style="background: #fef3c7;">
+                    <div class="funnel-metric"><strong>IC to Purchase Rate</strong></div>
+                    <div class="funnel-value" style="color: #d97706;">35.93%</div>
+                    <div class="funnel-kpi kpi-warning">Target: 50%</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">AOV</div>
+                    <div class="funnel-value">$105.48</div>
+                    <div class="funnel-kpi kpi-good">Above baseline $75</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Revenue</div>
+                    <div class="funnel-value">$149,040.41</div>
+                    <div class="funnel-kpi"></div>
+                </div>
+                
+                <div class="funnel-row" style="background: #fef3c7;">
+                    <div class="funnel-metric"><strong>ROAS</strong></div>
+                    <div class="funnel-value" style="color: #d97706;">2.75x</div>
+                    <div class="funnel-kpi kpi-warning">Target: 4.0 to 4.5x</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">Website CR (LPV to Purchase)</div>
+                    <div class="funnel-value">8.80%</div>
+                    <div class="funnel-kpi kpi-good">Strong</div>
+                </div>
+                
+                <div class="funnel-row">
+                    <div class="funnel-metric">CPA</div>
+                    <div class="funnel-value">$38.36</div>
+                    <div class="funnel-kpi kpi-warning">Target: under $25</div>
+                </div>
+            </div>
+
+            <h3>Funnel Insights</h3>
+
+            <div class="funnel-stage">
+                <strong>Top of Funnel (Impressions to Click): CTR at 1.20%</strong>
+                <p style="margin-top: 10px;">Your CTR sits slightly below the 1.5 percent benchmark for DTC skincare. This suggests creative hooks could be stronger, or targeting may be too broad in prospecting campaigns. The positive indicator is that retargeting campaigns show much higher engagement, confirming warm audiences respond well to your messaging.</p>
+            </div>
+
+            <div class="funnel-stage">
+                <strong>Click to Landing Page: 10.56% Drop Rate</strong>
+                <p style="margin-top: 10px;">You are losing 1 in 10 visitors between clicking the ad and the landing page loading. This exceeds the ideal range of 5 to 8 percent. Potential causes include slow page load speed on mobile, tracking discrepancies between Meta and Shopify, or users accidentally clicking and bouncing. Recommendation: Run PageSpeed Insights on key landing pages and review mobile experience.</p>
+            </div>
+
+            <div class="funnel-stage" style="background: #d1fae5; border-color: #10b981;">
+                <strong style="color: #065f46;">LPV to ATC: 48.10% (Exceptional)</strong>
+                <p style="margin-top: 10px; color: #065f46;">Nearly half of all landing page visitors are adding to cart. This is phenomenal for ecommerce where the typical benchmark is 8 to 12 percent. Your product pages, pricing, and offer are extremely compelling. This validates that traffic quality from ads is strong when visitors reach the site.</p>
+            </div>
+
+            <div class="funnel-stage" style="background: #d1fae5; border-color: #10b981;">
+                <strong style="color: #065f46;">ATC to IC: 50.94% (Excellent)</strong>
+                <p style="margin-top: 10px; color: #065f46;">Half of cart adders proceed to checkout. This indicates strong purchase intent and minimal cart abandonment at the consideration stage. Your cart page is performing its role effectively.</p>
+            </div>
+
+            <div class="funnel-stage">
+                <strong>IC to Purchase: 35.93% (Primary Opportunity Area)</strong>
+                <p style="margin-top: 10px;">You are losing nearly 2 out of 3 people at checkout. The benchmark for optimised ecommerce is 50 to 60 percent. Potential friction points include shipping costs (especially international), checkout flow complexity, limited payment options, or final price shock. This represents the biggest leak in your funnel and the most significant opportunity for improvement.</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>Funnel Summary:</strong> Your mid funnel (ATC to IC) is exceptionally strong, showing that people who engage with your products genuinely want to buy. The two areas requiring attention are: (1) getting people to the landing page efficiently (click to LPV drop), and (2) checkout completion. Addressing checkout abandonment alone could increase conversions by 30 to 40 percent without additional ad spend.
+            </div>
+        </div>
+
+        <!-- SLIDE 6: CAMPAIGN PERFORMANCE -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Campaign Performance Analysis</h2>
+                <p class="subtitle">Active Campaign Breakdown (30 Day Period)</p>
+            </div>
+
+            <h3>Campaign Performance Overview</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>Revenue</th>
+                        <th>ROAS</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fecaca;">
+                        <td><strong>18.06 | ABO Test</strong></td>
+                        <td>$14,541</td>
+                        <td>265</td>
+                        <td>$54.87</td>
+                        <td>$23,032</td>
+                        <td><strong>1.58x</strong></td>
+                        <td><span class="status-badge status-critical">Requires Action</span></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>13.11 | ABO | EBF</strong></td>
+                        <td>$12,086</td>
+                        <td>409</td>
+                        <td>$29.55</td>
+                        <td>$46,565</td>
+                        <td><strong>3.85x</strong></td>
+                        <td><span class="status-badge status-good">Excellent</span></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>20.10 | CBO | Best Ads</strong></td>
+                        <td>$9,095</td>
+                        <td>178</td>
+                        <td>$51.09</td>
+                        <td>$16,784</td>
+                        <td><strong>1.85x</strong></td>
+                        <td><span class="status-badge status-warning">Underperforming</span></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>18.03 | Retargeting</strong></td>
+                        <td>$5,997</td>
+                        <td>214</td>
+                        <td>$28.02</td>
+                        <td>$25,725</td>
+                        <td><strong>4.29x</strong></td>
+                        <td><span class="status-badge status-good">Excellent</span></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>13.11 | CBO | EBF</strong></td>
+                        <td>$5,567</td>
+                        <td>186</td>
+                        <td>$29.93</td>
+                        <td>$20,398</td>
+                        <td><strong>3.66x</strong></td>
+                        <td><span class="status-badge status-good">Strong</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>10.11 | CBO | Winners</strong></td>
+                        <td>$5,537</td>
+                        <td>134</td>
+                        <td>$41.32</td>
+                        <td>$13,666</td>
+                        <td><strong>2.47x</strong></td>
+                        <td><span class="status-badge status-warning">Moderate</span></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>25.11 | CBO | BFCM | TOF</strong></td>
+                        <td>$748</td>
+                        <td>16</td>
+                        <td>$46.72</td>
+                        <td>$1,266</td>
+                        <td><strong>1.69x</strong></td>
+                        <td><span class="status-badge status-warning">TOF Expected</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>04.11 | Lead Gen | BF</strong></td>
+                        <td>$632</td>
+                        <td>11</td>
+                        <td>$57.48</td>
+                        <td>$1,604</td>
+                        <td><strong>2.54x</strong></td>
+                        <td><span class="status-badge status-warning">Moderate</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Campaign Level Insights</h3>
+
+            <div class="action-item priority-high">
+                <h4>PRIORITY: 18.06 | ABO Test Consuming Budget Inefficiently</h4>
+                <p><strong>Performance:</strong> $14,541 spend with only 1.58x ROAS ($23,032 revenue)</p>
+                <p style="margin-top: 10px;"><strong>The Issue:</strong> This is your highest spending campaign and your lowest performer. At 1.58x ROAS, you are likely losing money on each sale when factoring in COGS and overhead. It consumes 27 percent of your total budget while delivering below breakeven returns.</p>
+                <p style="margin-top: 10px;"><strong>Why this is happening:</strong> The ABO Test structure suggests multiple ad sets running independently without proper winner identification. Ad sets may be competing against each other, or underperformers have been left running too long without review.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #dc2626;">Immediate Action: Pause all ad sets in this campaign except the top 1 to 2 performers. Alternatively, pause entirely and reallocate budget to EBF and Retargeting campaigns.</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>20.10 | CBO | Best Ads Requires Review</h4>
+                <p><strong>Performance:</strong> $9,095 spend with 1.85x ROAS, $51.09 CPA</p>
+                <p style="margin-top: 10px;"><strong>The Issue:</strong> Despite being named Best Ads, this campaign is delivering below target returns. The $51.09 CPA is nearly double your best performing campaigns.</p>
+                <p style="margin-top: 10px;"><strong>Context:</strong> This represents your second highest spend. Combined with the ABO Test campaign, these two underperformers account for $23,636 in spend (44 percent of budget) at sub 2x ROAS.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #dc2626;">Action: Review ad set and creative performance within this campaign. Pause anything below 2.5x ROAS and consolidate budget into proven winners.</p>
+            </div>
+
+            <div class="action-item priority-low" style="background: #d1fae5;">
+                <h4>13.11 | ABO | EBF: Your Best Performing Campaign</h4>
+                <p><strong>Performance:</strong> $12,086 spend with 3.85x ROAS, $29.55 CPA, 409 purchases</p>
+                <p style="margin-top: 10px;"><strong>Why it works:</strong> This Early Black Friday campaign is delivering nearly 4x return. The $29.55 CPA is sustainable for profitability, and it generated more purchases than any other campaign.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Action: This is your scale candidate. Increase budget by 20 to 30 percent and monitor for performance decay. Test duplicating winning ad sets with higher budgets.</p>
+            </div>
+
+            <div class="action-item priority-low" style="background: #d1fae5;">
+                <h4>18.03 | Retargeting: Consistent Strong Performer</h4>
+                <p><strong>Performance:</strong> $5,997 spend with 4.29x ROAS, $28.02 CPA, 214 purchases</p>
+                <p style="margin-top: 10px;"><strong>Why it works:</strong> Retargeting warm audiences who have already visited your site converts at high efficiency. This is exactly what you would expect from a properly structured retargeting campaign.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Action: Ensure retargeting audiences are refreshed regularly. Consider expanding retargeting windows and testing dynamic product ads for cart abandoners.</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>Campaign Strategy Summary:</strong> Your account shows a clear pattern where retargeting and well structured sale campaigns (EBF) deliver 3.5 to 4.5x ROAS, while broad testing campaigns underperform. The solution is not to stop prospecting entirely, but rather to be more decisive about cutting underperformers and allocating budget to proven winners.
+            </div>
+        </div>
+
+        <!-- SLIDE 7: AD SET PERFORMANCE -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Ad Set Performance Deep Dive</h2>
+                <p class="subtitle">Top Performers vs Underperformers</p>
+            </div>
+
+            <h3>Top 10 Ad Sets by ROAS (Minimum 5 Purchases)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>Revenue</th>
+                        <th>ROAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>All Time Buyers</strong></td>
+                        <td>$2,993</td>
+                        <td>127</td>
+                        <td>$23.57</td>
+                        <td>$18,207</td>
+                        <td><strong>6.08x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>BOF (13.11 | ABO | EBF)</strong></td>
+                        <td>$6,586</td>
+                        <td>260</td>
+                        <td>$25.33</td>
+                        <td>$30,106</td>
+                        <td><strong>4.57x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>BOF (13.11 | CBO | EBF)</strong></td>
+                        <td>$3,556</td>
+                        <td>145</td>
+                        <td>$24.52</td>
+                        <td>$16,059</td>
+                        <td><strong>4.52x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>MOF (13.11 | ABO | EBF)</strong></td>
+                        <td>$4,566</td>
+                        <td>132</td>
+                        <td>$34.59</td>
+                        <td>$14,978</td>
+                        <td><strong>3.28x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>BF Early Bird</td>
+                        <td>$632</td>
+                        <td>11</td>
+                        <td>$57.48</td>
+                        <td>$1,604</td>
+                        <td><strong>2.54x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>ATC/IC/WV (pf) 60</td>
+                        <td>$3,004</td>
+                        <td>87</td>
+                        <td>$34.52</td>
+                        <td>$7,518</td>
+                        <td><strong>2.50x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>10.11 | Winners</td>
+                        <td>$5,537</td>
+                        <td>134</td>
+                        <td>$41.32</td>
+                        <td>$13,666</td>
+                        <td><strong>2.47x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>MOF (13.11 | CBO | EBF)</td>
+                        <td>$2,012</td>
+                        <td>41</td>
+                        <td>$49.07</td>
+                        <td>$4,339</td>
+                        <td><strong>2.16x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>BFCM BOF</td>
+                        <td>$534</td>
+                        <td>12</td>
+                        <td>$44.52</td>
+                        <td>$1,099</td>
+                        <td><strong>2.06x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>05.11 | Version2 R</td>
+                        <td>$4,007</td>
+                        <td>82</td>
+                        <td>$48.86</td>
+                        <td>$7,968</td>
+                        <td><strong>1.99x</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Ad Set Patterns: What Works and What Does Not</h3>
+
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669;">Winners Share These Traits:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>BOF and MOF targeting:</strong> Bottom and middle of funnel audiences consistently outperform cold traffic</li>
+                        <li><strong>Retargeting focus:</strong> All Time Buyers hitting repeat customers at 6.08x ROAS</li>
+                        <li><strong>EBF timing:</strong> Early Black Friday campaigns capitalised on buying intent</li>
+                        <li><strong>CPA under $35:</strong> Best performers all maintain acquisition costs below $35</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #dc2626;">Underperformers Share These Traits:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>Broad prospecting:</strong> Cold traffic at TOF struggling to convert efficiently</li>
+                        <li><strong>CPA above $50:</strong> Several ad sets running at unsustainable acquisition costs</li>
+                        <li><strong>Version testing:</strong> Version2 and test variants showing mixed results</li>
+                        <li><strong>Influencer content:</strong> 2 min influencer ad at $44.88 CPA, below average performance</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Underperforming Ad Sets Requiring Review</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                        <th>Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fecaca;">
+                        <td>Best Ads</td>
+                        <td>$9,095</td>
+                        <td>178</td>
+                        <td>$51.09</td>
+                        <td>1.85x</td>
+                        <td><span class="status-badge status-critical">High spend, low return</span></td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td>05.11 | Marionete Lines R</td>
+                        <td>$506</td>
+                        <td>6</td>
+                        <td>$84.42</td>
+                        <td>0.65x</td>
+                        <td><span class="status-badge status-critical">Unprofitable</span></td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td>05.11 | Live R</td>
+                        <td>$492</td>
+                        <td>8</td>
+                        <td>$61.48</td>
+                        <td>0.94x</td>
+                        <td><span class="status-badge status-critical">Unprofitable</span></td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td>BFCM MOF</td>
+                        <td>$400</td>
+                        <td>5</td>
+                        <td>$80.09</td>
+                        <td>0.95x</td>
+                        <td><span class="status-badge status-critical">Unprofitable</span></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td>01.10 | Marionete Lines</td>
+                        <td>$1,644</td>
+                        <td>23</td>
+                        <td>$71.46</td>
+                        <td>1.15x</td>
+                        <td><span class="status-badge status-warning">Below breakeven</span></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td>01.10 | Live</td>
+                        <td>$932</td>
+                        <td>14</td>
+                        <td>$66.59</td>
+                        <td>1.09x</td>
+                        <td><span class="status-badge status-warning">Below breakeven</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>Ad Set Strategy:</strong> The data clearly shows BOF and retargeting ad sets massively outperform cold prospecting. Your All Time Buyers at 6.08x ROAS proves that investing in repeat customer targeting delivers exceptional returns. Recommendation: Shift 20 to 30 percent of prospecting budget into retargeting and BOF audiences.
+            </div>
+        </div>
+
+        <!-- SLIDE 8: CREATIVE PERFORMANCE -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Creative Performance Analysis</h2>
+                <p class="subtitle">Top Ads by ROAS and Spend</p>
+            </div>
+
+            <h3>Top Performing Creatives (by ROAS)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Name</th>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 1</strong></td>
+                        <td>BOF (CBO | EBF)</td>
+                        <td>$1,221</td>
+                        <td>73</td>
+                        <td>$16.73</td>
+                        <td><strong>7.19x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 2</strong></td>
+                        <td>BOF (CBO | EBF)</td>
+                        <td>$131</td>
+                        <td>7</td>
+                        <td>$18.66</td>
+                        <td><strong>6.53x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Restock new</strong></td>
+                        <td>All Time Buyers</td>
+                        <td>$2,114</td>
+                        <td>84</td>
+                        <td>$25.16</td>
+                        <td><strong>6.46x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 1</strong></td>
+                        <td>MOF (ABO | EBF)</td>
+                        <td>$1,247</td>
+                        <td>59</td>
+                        <td>$21.13</td>
+                        <td><strong>6.39x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 1</strong></td>
+                        <td>BOF (ABO | EBF)</td>
+                        <td>$1,632</td>
+                        <td>90</td>
+                        <td>$18.14</td>
+                        <td><strong>5.99x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>CREATIVE 2</strong></td>
+                        <td>BOF (ABO | EBF)</td>
+                        <td>$526</td>
+                        <td>26</td>
+                        <td>$20.22</td>
+                        <td><strong>5.37x</strong></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Restock</strong></td>
+                        <td>All Time Buyers</td>
+                        <td>$879</td>
+                        <td>43</td>
+                        <td>$20.45</td>
+                        <td><strong>5.18x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>CREATIVE 5</td>
+                        <td>BOF</td>
+                        <td>$710</td>
+                        <td>22</td>
+                        <td>$32.29</td>
+                        <td><strong>4.97x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>CREATIVE 3</td>
+                        <td>BOF (ABO | EBF)</td>
+                        <td>$1,554</td>
+                        <td>69</td>
+                        <td>$22.52</td>
+                        <td><strong>4.78x</strong></td>
+                    </tr>
+                    <tr>
+                        <td>gab mini new2 bfcm</td>
+                        <td>BFCM BOF</td>
+                        <td>$122</td>
+                        <td>4</td>
+                        <td>$30.51</td>
+                        <td><strong>4.20x</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Creative Insights</h3>
+
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669;">Winning Creative Patterns:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>CREATIVE 1 is your hero:</strong> Delivers 5.99 to 7.19x ROAS across multiple ad sets. This creative should be scaled aggressively.</li>
+                        <li><strong>Restock messaging works:</strong> Both Restock ads in All Time Buyers deliver 5 to 6x plus ROAS. Urgency and scarcity messaging resonates with repeat buyers.</li>
+                        <li><strong>Simple naming indicates focus:</strong> Top performers have simple, direct names suggesting straightforward product focused creative.</li>
+                        <li><strong>CPAs under $25:</strong> Every top performer maintains sub $25 acquisition cost.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #dc2626;">Underperforming Creative Patterns:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li><strong>3 tips format struggling:</strong> Despite high spend ($4,888 and $3,478), only 1.63 to 1.68x ROAS. Educational content not converting well to direct sales.</li>
+                        <li><strong>Marionete Lines content:</strong> Both versions performing at or below breakeven. Angle may not resonate with target audience.</li>
+                        <li><strong>Long form influencer:</strong> 2 min influencer at $44.88 CPA is inefficient compared to shorter, product focused content.</li>
+                        <li><strong>Live content:</strong> Live creative at 0.94 to 1.09x ROAS. Repurposed live content not converting effectively.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">High Spend Creatives Requiring Review</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Name</th>
+                        <th>Spend</th>
+                        <th>ROAS</th>
+                        <th>Issue</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fef3c7;">
+                        <td>3 tips Copy</td>
+                        <td>$4,888</td>
+                        <td>1.68x</td>
+                        <td>High spend, below target ROAS</td>
+                        <td>Reduce budget or pause</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td>Gab IG Dermaroller Copy</td>
+                        <td>$3,740</td>
+                        <td>2.06x</td>
+                        <td>Moderate performance</td>
+                        <td>Test new variations</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td>3 tips (05.11)</td>
+                        <td>$3,478</td>
+                        <td>1.63x</td>
+                        <td>Below breakeven</td>
+                        <td>Pause immediately</td>
+                    </tr>
+                    <tr>
+                        <td>New Insta</td>
+                        <td>$3,637</td>
+                        <td>2.68x</td>
+                        <td>Acceptable but not optimal</td>
+                        <td>Monitor closely</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td>2 min Influencer</td>
+                        <td>$2,603</td>
+                        <td>1.88x</td>
+                        <td>Influencer content underperforming</td>
+                        <td>Test shorter cuts</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="insight-box">
+                <strong>Creative Strategy Recommendation:</strong> Your CREATIVE 1 and Restock ads are proven winners. Double down on these formats: product focused, direct messaging, urgency driven for repeat buyers. Reduce investment in educational tips content and long form influencer videos until you have scaled the winners to capacity. Consider creating 3 to 5 variations of CREATIVE 1 to test hooks and angles.
+            </div>
+        </div>
+
+        <!-- SLIDE 7: CRO AUDIT -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-cro">CRO</span> Website Conversion Rate Optimisation Audit</h2>
+                <p class="subtitle">Opportunities to Increase Revenue Without Additional Ad Spend</p>
+            </div>
+
+            <div style="background: #ecfdf5; border-left: 6px solid #10b981; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #065f46;">CRO Assessment Summary</h3>
+                <p style="font-size: 18px; line-height: 1.6; color: #065f46;">Gin Amber Beauty is uniquely positioned but not yet clearly differentiated in the first 5 seconds of the user journey. Your core distinguishing features, including real individual needles, toxic free skincare, education first approach, and thousands of real results, are not being surfaced immediately or consistently across the funnel. With a 3.69 percent baseline conversion rate, you already demonstrate product market fit. Now we optimise for scale while strengthening CR, AOV, and ROAS.</p>
+            </div>
+
+            <h3>Your Uncommon Offering (Currently Under Leveraged)</h3>
+            <div class="metric-grid">
+                <div class="metric-card success">
+                    <div class="metric-label">Trademarked Real Individual Needles</div>
+                    <div class="metric-value" style="font-size: 22px;">Real Needles</div>
+                    <div class="metric-change">vs dangerous 540 disc rollers</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Toxic Free</div>
+                    <div class="metric-value" style="font-size: 24px;">Certified</div>
+                    <div class="metric-change">Clean skincare formulations</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Education First</div>
+                    <div class="metric-value" style="font-size: 24px;">Expert Led</div>
+                    <div class="metric-change">Guidance and support</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Real Results</div>
+                    <div class="metric-value" style="font-size: 24px;">7,000+</div>
+                    <div class="metric-change">Verified reviews</div>
+                </div>
+            </div>
+
+            <h3>Best Selling Products</h3>
+            <div class="two-column" style="margin-top: 20px;">
+                <div>
+                    <h4 style="color: #059669;">Dermarollers:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Mini Dermaroller</li>
+                        <li>0.5mm Dermaroller</li>
+                        <li>0.5mm Replaceable Head Dermaroller</li>
+                        <li>1.0mm Dermaroller</li>
+                        <li>0.25mm Dermaroller</li>
+                        <li>1.5mm Body Dermaroller</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #059669;">Skincare:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Natural Peptide Serum</li>
+                        <li>Natural Foam Cleanser</li>
+                        <li>Repair Cream</li>
+                        <li>Hyaluronic Acid Serum</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Key Business Metrics (From Onboarding)</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Customer Lifetime Value</div>
+                    <div class="metric-value" style="font-size: 28px;">$89 to $164</div>
+                    <div class="metric-change">Depending on cohort maturity</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Baseline AOV</div>
+                    <div class="metric-value" style="font-size: 28px;">$75.36</div>
+                    <div class="metric-change">Last 12 months average</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Cost of Goods Sold</div>
+                    <div class="metric-value" style="font-size: 28px;">14.3%</div>
+                    <div class="metric-change">Across all SKUs</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Baseline Website CR</div>
+                    <div class="metric-value" style="font-size: 28px;">3.69%</div>
+                    <div class="metric-change">Non peak months</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px;">Main Customer Objections (Barriers to Conversion)</h3>
+            <div class="two-column">
+                <div class="action-item" style="border-left: 6px solid #f59e0b;">
+                    <h4 style="color: #f59e0b; margin-top: 0;">Cost Concerns</h4>
+                    <p>Mainly shipping fees for international customers. This is a significant barrier for worldwide expansion.</p>
+                    <p style="margin-top: 10px;"><strong>Solution:</strong> Consider free shipping thresholds, clearer shipping cost communication upfront, or absorbed shipping for first time buyers.</p>
+                </div>
+                <div class="action-item" style="border-left: 6px solid #f59e0b;">
+                    <h4 style="color: #f59e0b; margin-top: 0;">Fear of At Home Microneedling</h4>
+                    <p>Customers are scared of using a dermaroller or microneedling tool at home without professional guidance.</p>
+                    <p style="margin-top: 10px;"><strong>Solution:</strong> Education first messaging, step by step tutorials, safety reassurance, and beginner friendly product recommendations.</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px;">Competitive Landscape</h3>
+            <p>Key competitors identified: <strong>BeautyBio, Banish, StackedSkincare, FaceGym</strong></p>
+            <p style="margin-top: 10px;">Your differentiator: Unlike competitors using 540 disc rollers, Gin Amber Beauty offers trademarked real individual needles combined with certified toxic free skincare and education first approach. This positions you as the safer, more trustworthy option in the market.</p>
+
+            <h3 style="margin-top: 40px;">Homepage CRO Recommendations</h3>
+
+            <div class="action-item priority-high">
+                <h4>Problem: No Clear Value Proposition Above the Fold</h4>
+                <p>Too many competing sections with no hierarchy. Before and after blocks lack context. Educational value and authority are buried. Popup is generic rather than aligned to brand value.</p>
+                <p style="margin-top: 15px;"><strong>Solution:</strong> Replace generic sale messaging with clear value proposition:</p>
+                <p style="margin-top: 10px; padding: 15px; background: #f8fafc; border-radius: 8px; font-style: italic;">"The safest, most effective microneedling at home with real individual needles and non toxic skincare. Backed by science. Trusted by thousands of women worldwide."</p>
+                <p style="margin-top: 15px;"><strong>Add supporting trust icons:</strong> Medical grade real needles, Toxic free formulations, 7,000 plus reviews, Safe for women 30 plus</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Increases conversion 12 to 20 percent based on authority and trust psychology.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>Reorder Homepage Sections for Buyer Intent</h4>
+                <p><strong>Recommended order:</strong></p>
+                <ol style="margin-left: 20px; margin-top: 10px;">
+                    <li>Hero value proposition</li>
+                    <li>Best sellers with concern badges</li>
+                    <li>Before and after with details (duration, needle size, routine steps, customer story)</li>
+                    <li>Shop by concern</li>
+                    <li>Quiz</li>
+                    <li>Education (why real needles matter)</li>
+                    <li>Bundles</li>
+                    <li>Blog and Reviews</li>
+                </ol>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Contextual before and after increases add to cart by 10 to 15 percent.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>Replace Popup with Quiz Incentive</h4>
+                <p><strong>Current:</strong> Generic email capture popup</p>
+                <p style="margin-top: 10px;"><strong>Recommended:</strong> "Take the 60 second Skin Quiz for a personalised routine plus 10 percent off."</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Improves email capture by 18 to 30 percent based on commitment and curiosity psychology.</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">Shop All Page Recommendations</h3>
+            <div class="two-column">
+                <div>
+                    <h4>Add Additional Filters:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>By routine (AM or PM)</li>
+                        <li>By skin type</li>
+                        <li>By experience level</li>
+                    </ul>
+                    <p style="font-size: 13px; color: #666; margin-top: 10px;"><em>Note: Shop by concern already exists which is good</em></p>
+                </div>
+                <div>
+                    <h4>Add Badges:</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Best seller</li>
+                        <li>Great for beginners</li>
+                        <li>Trademarked Real Individual Needles</li>
+                        <li>4.8 stars 600 plus reviews</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Additional filters and badges improve product discovery by 14 to 22 percent.</p>
+        </div>
+
+        <!-- SLIDE 8: CRO CART AND CHECKOUT -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-cro">CRO</span> Cart and Checkout Optimisation</h2>
+                <p class="subtitle">Addressing the 64% Checkout Abandonment Rate</p>
+            </div>
+
+            <div style="background: #fef3c7; border-left: 6px solid #f59e0b; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #92400e;">The Biggest Revenue Opportunity</h3>
+                <p style="font-size: 18px; line-height: 1.6; color: #92400e;">Your IC to Purchase rate of 35.93 percent means you are losing 2,520 potential purchases at checkout. With an AOV of $105.48, that represents over $265,000 in lost revenue during this 30 day period. Improving checkout completion from 36 percent to 50 percent could add 550 plus purchases monthly without any additional ad spend.</p>
+            </div>
+
+            <h3>Cart Page CRO Recommendations</h3>
+
+            <div class="action-item priority-high">
+                <h4>Problem: Little Trust Reinforcement at Cart Stage</h4>
+                <p>No safety reassurance, generic cross sells, package protection unclear.</p>
+                <p style="margin-top: 15px;"><strong>Solution: Add Trust Summary</strong></p>
+                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    <p>Include the following trust elements:</p>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>60 day guarantee</li>
+                        <li>Safe real needle microneedling</li>
+                        <li>Toxic free skincare</li>
+                        <li>Fast shipping</li>
+                        <li>Thousands of happy customers worldwide</li>
+                    </ul>
+                </div>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Reduces cart abandonment by 10 to 12 percent.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>Strategic Cross Sells Based on Cart Contents</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>If dermaroller is in cart, show serums or replacement heads</li>
+                    <li>If kit is in cart, show masks or accessories</li>
+                    <li>Bundle suggestions based on skin concern</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Increases AOV by 15 to 25 percent.</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">Checkout Page CRO Recommendations</h3>
+
+            <div class="action-item priority-high">
+                <h4>Problem: No Testimonials, Guarantee, or Safety Messaging at Checkout</h4>
+                <p>No shipping timeline visibility. No reassurance at final conversion point.</p>
+                <p style="margin-top: 15px;"><strong>Solution: Add Trust Elements Near Pay Button</strong></p>
+                <div style="background: #f8fafc; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                    <ul style="margin-left: 20px;">
+                        <li>60 day guarantee</li>
+                        <li>Medical grade microneedling</li>
+                        <li>Non toxic ingredients</li>
+                        <li>Secure payment</li>
+                        <li>Results backed by real customers</li>
+                    </ul>
+                    <p style="margin-top: 15px; font-style: italic;">"My fine lines improved in 90 days and it was completely safe." - Verified Customer</p>
+                </div>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Increases checkout completion by 4 to 8 percent.</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">CRO Hypotheses Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hypothesis</th>
+                        <th>Expected Impact</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Clear value proposition above the fold</td>
+                        <td>Increases CR by 12 to 20%</td>
+                        <td><span class="status-badge status-critical">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Contextual before and after content</td>
+                        <td>Increases ATC by 10 to 15%</td>
+                        <td><span class="status-badge status-critical">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Quiz popup replacing generic popup</td>
+                        <td>Increases email capture by 18 to 30%</td>
+                        <td><span class="status-badge status-warning">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Concern based filters on shop page</td>
+                        <td>Improves product discovery by 14 to 22%</td>
+                        <td><span class="status-badge status-warning">Medium</span></td>
+                    </tr>
+                    <tr>
+                        <td>Trust box in cart</td>
+                        <td>Reduces abandonment by 10 to 12%</td>
+                        <td><span class="status-badge status-critical">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Testimonial plus guarantee at checkout</td>
+                        <td>Increases completion by 4 to 8%</td>
+                        <td><span class="status-badge status-critical">High</span></td>
+                    </tr>
+                    <tr>
+                        <td>Strategic cross sells</td>
+                        <td>Increases AOV by 15 to 25%</td>
+                        <td><span class="status-badge status-warning">Medium</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="cro-box">
+                <strong>The Biggest Opportunity:</strong> Your brand has a uniquely strong position but it is not yet clearly communicated. The message "The safest, most effective at home anti aging for women 30 plus" must lead every page, ad, and video. When you anchor the brand around safety, real needles, non toxic, and education, your conversion rates and ROAS will improve significantly.
+            </div>
+        </div>
+
+        <!-- SLIDE 11: CUSTOMER PAIN ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>Customer Pain Analysis</h2>
+                <p class="subtitle">Understanding What Drives Your Ideal Customer to Act</p>
+            </div>
+
+            <div style="background: #f0f9ff; border-left: 6px solid #cc5b27; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #cc5b27;">Why This Matters for Ad Performance</h3>
+                <p style="font-size: 18px; line-height: 1.6;">Your ideal customer is a woman aged 30 to 60 who is emotionally invested in solving her skin concerns. She is not just buying a product. She is seeking confidence, safety, and guidance. Understanding her deeper fears and frustrations is essential for crafting hooks, scripts, and messaging that convert. The pain points below should inform every piece of creative content.</p>
+            </div>
+
+            <h3>Life Altering and Urgent Pains</h3>
+            <p style="margin-bottom: 20px; color: #666;">These are intense pain points that create urgency and drive immediate action.</p>
+
+            <div class="two-column">
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Fear of Visible Aging</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I hate what I see in the mirror. My skin looks tired, old, and worn down."</p>
+                        <p><strong>Core Fear:</strong> Inadequacy. She feels her confidence fading with every glance.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Before and after transformations, real results from real women</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Fear of Future Decline</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I'm terrified that if I don't do something now, I'll look ten years older in the next five."</p>
+                        <p><strong>Core Fear:</strong> Something bad happening. Preemptive fear of decline creates urgency to act today.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Prevention messaging, start now before it is too late</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Repeated Product Failure</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"Nothing I've tried works. I'm running out of hope and out of options."</p>
+                        <p><strong>Core Fear:</strong> Failure. Repeated disappointment leads to skepticism but also readiness for something real.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> I tried everything until I found this, skeptic turned believer</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Fear of Toxic Products</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I'm scared of putting toxic chemicals on my face. It shouldn't be this hard to find clean skincare."</p>
+                        <p><strong>Core Fear:</strong> Health harm. Her health consciousness runs deep, possibly from past experiences.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Toxic free, certified clean, what is actually in your skincare</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Fear of Dermarollers</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I'm scared to use dermarollers. I've seen horror stories about doing it wrong."</p>
+                        <p><strong>Core Fear:</strong> Getting hurt. Physical harm is a key friction point where education becomes your strongest conversion asset.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Safe microneedling at home, real needles explained, step by step guidance</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Time Constraints</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I don't have time to visit dermatologists or estheticians every month. I need something that works from home."</p>
+                        <p><strong>Core Fear:</strong> Loss of freedom. Trapped between lack of time and desire for visible results.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> At home spa results, 5 minutes a week, busy mum solution</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Impact on Relationships</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"My skin issues are affecting my marriage. I don't feel attractive anymore."</p>
+                        <p><strong>Core Fear:</strong> Rejection. The pain is intimate, about vulnerability and emotional connection.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Feel confident again, reclaim your glow, intimate testimonials</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Wasted Money</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I'm spending hundreds on treatments that don't deliver. I can't afford to keep doing this."</p>
+                        <p><strong>Core Fear:</strong> Failure. Growing resentment from wasted money and unmet promises.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Fraction of salon cost, one time investment, money back guarantee</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Loss of Control</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I feel like I'm losing control of my appearance. Nothing seems to stop the sagging and wrinkles."</p>
+                        <p><strong>Core Fear:</strong> Change. Aging represents loss of agency over her own body.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Take back control, proven science, visible results in weeks</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Public Shame</h4>
+                        <p style="font-style: italic; margin-bottom: 10px;">"I'm embarrassed by my acne scars and stretch marks. People stare when I wear shorts or go makeup free."</p>
+                        <p><strong>Core Fear:</strong> Being judged. Skin issues feel like social liabilities.</p>
+                        <p style="margin-top: 10px;"><strong>Hook Angle:</strong> Confidence without makeup, wear what you want, scar transformation stories</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: EMOTIONAL PAINS AND CREATIVE APPLICATION -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>Emotional Pains and Creative Application</h2>
+                <p class="subtitle">Quieter But Ever Present Irritants for Hooks and Nurturing</p>
+            </div>
+
+            <h3>Nagging Emotional Pains</h3>
+            <p style="margin-bottom: 20px; color: #666;">These are ideal for short form content hooks and nurturing campaigns.</p>
+
+            <div class="two-column">
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Lost Youthful Glow</h4>
+                        <p style="font-style: italic;">"I miss the glow I used to have in my 20s. It feels like I've just faded."</p>
+                        <p><strong>Fear:</strong> Loss of identity</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Information Overwhelm</h4>
+                        <p style="font-style: italic;">"I'm overwhelmed by all the skincare advice online. Who do I even trust anymore?"</p>
+                        <p><strong>Fear:</strong> Uncertainty. She longs for a guide she can believe in.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Mum Guilt</h4>
+                        <p style="font-style: italic;">"I feel guilty spending time or money on myself when my kids need so much."</p>
+                        <p><strong>Fear:</strong> Rejection. Self care comes with emotional guilt.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Looking More Tired Than Feeling</h4>
+                        <p style="font-style: italic;">"I hate that my skin makes me look more tired than I feel."</p>
+                        <p><strong>Fear:</strong> Being judged. Appearance does not match her energy.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Social Comparison</h4>
+                        <p style="font-style: italic;">"I get so jealous seeing influencers with flawless skin. I'll never look like that."</p>
+                        <p><strong>Fear:</strong> Inadequacy. Comparison chips away at self worth.</p>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Desire for Simplicity</h4>
+                        <p style="font-style: italic;">"I'm not asking for perfect skin. I just want to feel good without makeup."</p>
+                        <p><strong>Fear:</strong> Rejection. Her goal is authenticity, not perfection.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Fear of Giving Up</h4>
+                        <p style="font-style: italic;">"I don't want to be one of those women who gave up on looking good."</p>
+                        <p><strong>Fear:</strong> Change. Fear of becoming invisible or left behind.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Ingredient Confusion</h4>
+                        <p style="font-style: italic;">"I don't know what half these ingredients even are. Why is it so hard to find clean skincare I can actually understand?"</p>
+                        <p><strong>Fear:</strong> Uncertainty. Confusion breeds distrust.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Complexity Paralysis</h4>
+                        <p style="font-style: italic;">"I feel like I need a PhD to understand which skincare products go together."</p>
+                        <p><strong>Fear:</strong> Failure. Complexity creates paralysis.</p>
+                    </div>
+
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Desire for Guidance</h4>
+                        <p style="font-style: italic;">"I wish I had someone to walk me through what actually works for my skin."</p>
+                        <p><strong>Fear:</strong> Loneliness. She wants a mentor, not just a product.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Creative Application Examples</h3>
+
+            <div class="cro-box">
+                <h4 style="color: #059669; margin-top: 0;">Short Form Hook Examples</h4>
+                <p style="margin-top: 15px;"><strong>For Fear of Getting Hurt:</strong></p>
+                <p style="font-style: italic; padding: 10px; background: white; border-radius: 6px; margin-top: 5px;">"Still scared to try microneedling at home? You're not alone. But this is why thousands of women now swear by it."</p>
+                
+                <p style="margin-top: 15px;"><strong>For Repeated Failure:</strong></p>
+                <p style="font-style: italic; padding: 10px; background: white; border-radius: 6px; margin-top: 5px;">"I was this close to giving up on skincare until I found something that actually worked without harsh chemicals."</p>
+                
+                <p style="margin-top: 15px;"><strong>For Time Constraints:</strong></p>
+                <p style="font-style: italic; padding: 10px; background: white; border-radius: 6px; margin-top: 5px;">"No salon appointments. No complicated routines. Just 5 minutes a week for skin that actually glows."</p>
+                
+                <p style="margin-top: 15px;"><strong>For Information Overwhelm:</strong></p>
+                <p style="font-style: italic; padding: 10px; background: white; border-radius: 6px; margin-top: 5px;">"Confused by all the skincare advice out there? Here's the only thing you actually need to know."</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>Strategic Application:</strong> Each of these pain points is emotionally rich fuel for video scripts, hooks, Reels, UGC style content, and ad messaging. Your winning creatives likely already tap into some of these fears. The opportunity is to systematically test hooks addressing different pain points to discover which emotional triggers drive the highest conversion rates for your audience.
+            </div>
+        </div>
+
+        <!-- SLIDE 13: COMPETITOR ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>Competitor Ad Analysis</h2>
+                <p class="subtitle">BeautyBio, Banish, StackedSkincare, FaceGym vs Gin Amber Beauty</p>
+            </div>
+
+            <div style="background: #f0f9ff; border-left: 6px solid #cc5b27; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #cc5b27;">Competitive Landscape Overview</h3>
+                <p style="font-size: 16px; line-height: 1.6;">Analysis of active Meta ads from four key competitors reveals clear patterns in messaging, creative formats, and positioning. This intelligence highlights gaps Gin Amber Beauty can exploit and best practices worth adopting.</p>
+            </div>
+
+            <h3>Competitor Positioning Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Competitor</th>
+                        <th>Primary Position</th>
+                        <th>Key Messaging</th>
+                        <th>Ad Volume</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>BeautyBio</strong></td>
+                        <td>Premium at home glow</td>
+                        <td>"Glow like never before" / "Your glow up starts here"</td>
+                        <td>High (20+ active)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Banish</strong></td>
+                        <td>Acne scar specialist</td>
+                        <td>"Patented gold plated titanium" / "Safest home microneedling"</td>
+                        <td>High (15+ active)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>StackedSkincare</strong></td>
+                        <td>Pro grade expertise</td>
+                        <td>"For women who know better" / "Experience is the ingredient"</td>
+                        <td>Medium (12+ active)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>FaceGym</strong></td>
+                        <td>Facial fitness (service)</td>
+                        <td>"Don't skip face day" / "Workout for your face"</td>
+                        <td>Medium (15+ active)</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Gin Amber Beauty</strong></td>
+                        <td>Real needles, toxic free</td>
+                        <td>Currently: Sale focused / Should be: Safety and education</td>
+                        <td>Medium (15+ active)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Competitor Creative Patterns</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669;">BeautyBio Approach:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Heavy influencer partnerships (Jamie Makeup, Ircalove)</li>
+                        <li>Product focused hero shots on clean backgrounds</li>
+                        <li>"GLOFacial" product as hero with spa positioning</li>
+                        <li>Free shipping over $75/$99 threshold prominent</li>
+                        <li>Black Friday: 30% off sitewide messaging</li>
+                        <li>TikTok viral trends referenced in ads</li>
+                    </ul>
+                    
+                    <h4 style="color: #059669; margin-top: 20px;">Banish Approach:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Problem/solution storytelling heavy</li>
+                        <li>"Wasted money on products that promised miracles"</li>
+                        <li>Strong UGC and transformation content</li>
+                        <li>Educational angle on collagen stimulation</li>
+                        <li>45 day money back guarantee featured</li>
+                        <li>"Patented" and "gold plated titanium" as differentiators</li>
+                        <li>Since 2013 heritage messaging</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #059669;">StackedSkincare Approach:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Sophisticated, educated consumer positioning</li>
+                        <li>"Aesthetician developed" credibility</li>
+                        <li>"Real results come from technique, not trends"</li>
+                        <li>Multiple product categories (peels, tools, serums)</li>
+                        <li>Clean, premium creative aesthetic</li>
+                        <li>20% off first order plus free shipping $75+</li>
+                        <li>"Visible Results. No Fluff." directness</li>
+                    </ul>
+                    
+                    <h4 style="color: #059669; margin-top: 20px;">FaceGym Approach:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Service model (not direct competitor)</li>
+                        <li>Strong brand tagline: "Don't skip face day"</li>
+                        <li>Membership/subscription focus</li>
+                        <li>Location based targeting for studios</li>
+                        <li>Bold typography, dark brand colours</li>
+                        <li>Benefits focused: sculpting, toning, circulation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 12: COMPETITOR GAPS AND OPPORTUNITIES -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>Competitive Gaps and Opportunities</h2>
+                <p class="subtitle">Where Gin Amber Beauty Can Win</p>
+            </div>
+
+            <h3>Current Gin Amber Beauty Evergreen Ad Observations</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669;">Strengths in Current Evergreen Ads:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li><strong>Founder led content with Gin featured:</strong> "This is why I love dermarollers, I'm 54, no Botox"</li>
+                        <li><strong>Age specific hooks:</strong> "Why do so many serums and creams stop working after 40?"</li>
+                        <li><strong>Problem agitation:</strong> "It's not always the product, it's the skin. As we age, skin becomes less receptive"</li>
+                        <li><strong>Before/after transformations:</strong> Clear visual proof with labelled imagery</li>
+                        <li><strong>Benefits focused copy:</strong> Collagen and elastin induction, hyperpigmentation reduction, pore minimisation</li>
+                        <li><strong>Botox alternative positioning:</strong> "This works better than Botox!"</li>
+                        <li><strong>Educational hooks:</strong> "Don't ruin your skin by using your dermaroller more than 10 times!"</li>
+                        <li><strong>Restock ads for retention:</strong> "Time to restock?" messaging for existing customers</li>
+                        <li><strong>Social proof:</strong> 4.9/5 rating displayed prominently</li>
+                        <li><strong>Value positioning:</strong> "Stop spending a fortune on expensive creams and facials"</li>
+                        <li><strong>Discount offers:</strong> 15% off first order (AMBER15), free delivery (GLOW)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #dc2626;">Gaps and Opportunities:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li><strong>Real Individual Needles USP buried:</strong> Not prominent in hooks or headlines</li>
+                        <li><strong>No clear differentiation from 540 disc rollers:</strong> Competitors don't explain this either, so major opportunity</li>
+                        <li><strong>Toxic free certification not highlighted:</strong> Unique selling point not leveraged</li>
+                        <li><strong>Safety messaging could be stronger:</strong> "Don't ruin your skin" is good, but could lean into fear handling more</li>
+                        <li><strong>8 plus years of expertise underutilised:</strong> Heritage and authority not emphasised</li>
+                        <li><strong>Money back guarantee not visible:</strong> Competitors like Banish feature 45 day guarantee</li>
+                        <li><strong>Limited UGC variety:</strong> Most content is Gin or product shots, less customer transformation stories</li>
+                        <li><strong>No clear brand tagline:</strong> Competitors have memorable lines ("Don't skip face day", "For women who know better")</li>
+                        <li><strong>Benefits copy is educational but not emotional:</strong> Could tap deeper into pain points</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px;">Evergreen Ad Formats Currently Running</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #162642;">Video Content (Strong Performers):</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Gin talking to camera with "I'm 54, no Botox" hook</li>
+                        <li>Benefits of microneedling educational videos</li>
+                        <li>Before/after transformation videos</li>
+                        <li>"With every roll, with every session" messaging</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #162642;">Static/Image Ads:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Before/after side by side comparisons</li>
+                        <li>Product photography with discount codes</li>
+                        <li>Restock reminder ads with product imagery</li>
+                        <li>Free delivery offer graphics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Competitive Gaps Gin Amber Can Exploit</h3>
+
+            <div class="action-item" style="border-left: 6px solid #10b981; margin-bottom: 15px;">
+                <h4 style="color: #10b981; margin-top: 0;">Gap 1: Safety and Fear Handling</h4>
+                <p><strong>Opportunity:</strong> Banish mentions "safest" but does not deeply address the fear of microneedling at home. Gin Amber can own the safety conversation with educational content showing proper technique, real needles vs disc rollers comparison, and beginner friendly messaging.</p>
+                <p style="margin-top: 10px;"><strong>Creative Concept:</strong> "Scared to try microneedling at home? Here's why thousands of women trust Gin Amber's real individual needles over dangerous 540 disc rollers."</p>
+            </div>
+
+            <div class="action-item" style="border-left: 6px solid #10b981; margin-bottom: 15px;">
+                <h4 style="color: #10b981; margin-top: 0;">Gap 2: Toxic Free Positioning</h4>
+                <p><strong>Opportunity:</strong> BeautyBio and StackedSkincare do not emphasise clean/toxic free credentials. Banish mentions "organic" but not certified toxic free. This is white space for Gin Amber to own.</p>
+                <p style="margin-top: 10px;"><strong>Creative Concept:</strong> "Your skin absorbs what you put on it. That's why every Gin Amber product is certified toxic free. Because we care about your internal health too."</p>
+            </div>
+
+            <div class="action-item" style="border-left: 6px solid #10b981; margin-bottom: 15px;">
+                <h4 style="color: #10b981; margin-top: 0;">Gap 3: Real Needles Technical Superiority</h4>
+                <p><strong>Opportunity:</strong> Banish claims "patented gold plated titanium" but does not explain needle technology. No competitor is educating on real individual needles vs stamped disc rollers. This is Gin Amber's trademark differentiator.</p>
+                <p style="margin-top: 10px;"><strong>Creative Concept:</strong> Side by side comparison video showing 540 disc roller needles (bent, uneven) vs Gin Amber real individual needles (precise, safe). "See the difference? Your skin can feel it."</p>
+            </div>
+
+            <div class="action-item" style="border-left: 6px solid #10b981; margin-bottom: 15px;">
+                <h4 style="color: #10b981; margin-top: 0;">Gap 4: Founder Led Authenticity</h4>
+                <p><strong>Opportunity:</strong> BeautyBio uses influencers but no visible founder. Banish has founder content but less prominent. StackedSkincare mentions "aesthetician developed" but no face. Gin has 500K+ followers and is the authentic face of the brand. This is underleveraged.</p>
+                <p style="margin-top: 10px;"><strong>Creative Concept:</strong> Gin directly addressing camera: "I've been teaching women how to microneedle safely for 8 years. Here's what no one else will tell you..."</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">Competitor Tactics Worth Adopting</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #cc5b27;">From BeautyBio:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Free shipping threshold prominently displayed</li>
+                        <li>Clean product photography on white/neutral backgrounds</li>
+                        <li>Influencer partnership content at scale</li>
+                    </ul>
+                    
+                    <h4 style="color: #cc5b27; margin-top: 15px;">From Banish:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Problem/solution storytelling structure</li>
+                        <li>45 day money back guarantee prominent</li>
+                        <li>Heritage messaging ("Since 2013" / Gin: "8+ years")</li>
+                        <li>UGC transformation content</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #cc5b27;">From StackedSkincare:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>"Results, not trends" anti-hype positioning</li>
+                        <li>Professional credibility messaging</li>
+                        <li>First order discount plus free shipping combo</li>
+                    </ul>
+                    
+                    <h4 style="color: #cc5b27; margin-top: 15px;">From FaceGym:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Strong memorable tagline (need equivalent)</li>
+                        <li>Bold, confident brand voice</li>
+                        <li>Benefits focused messaging structure</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Strategic Recommendation:</strong> Gin Amber Beauty's evergreen ads have solid foundations: founder led content with Gin's authentic voice, educational hooks addressing age specific concerns, and clear before/after proof. However, the brand's biggest differentiators (trademarked real individual needles, certified toxic free, 8 plus years expertise) are not front and centre. The opportunity is to layer these unique selling points into existing creative formats while developing new hooks that address customer fears more directly. Continue leveraging Gin as the trusted guide while adding more UGC variety and a memorable brand tagline to compete with "Don't skip face day" and "For women who know better."
+            </div>
+        </div>
+
+        <!-- SLIDE 15: ACTION PLAN -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>7 Day Optimisation Action Plan</h2>
+                <p class="subtitle">Prioritised by Impact and Urgency</p>
+            </div>
+
+            <div style="background: #dc2626; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="color: white; margin-top: 0;">IMMEDIATE ACTIONS (Day 1 to 2)</h3>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>Day 1 Morning: Pause Underperforming Campaigns</h4>
+                <p><strong>Action:</strong> Pause or significantly reduce budget on:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>18.06 | ABO Test:</strong> $14,541 at 1.58x ROAS. Either pause entirely or reduce to top 1 to 2 ad sets only.</li>
+                    <li><strong>20.10 | CBO | Best Ads:</strong> $9,095 at 1.85x ROAS. Review ad set performance and pause bottom 50 percent.</li>
+                    <li><strong>Individual ads:</strong> Pause 3 tips variations, Marionete Lines, and Live content running below 1.5x ROAS.</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #dc2626;">Expected Impact: Immediately redirect approximately $500 to $800 per day from unprofitable spend.</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>Day 1 Afternoon: Scale Winners</h4>
+                <p><strong>Action:</strong> Increase budgets on proven performers:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>13.11 | ABO | EBF (BOF ad set):</strong> Increase from current level by 25 to 30 percent</li>
+                    <li><strong>18.03 | Retargeting:</strong> Increase by 20 percent if not at frequency cap</li>
+                    <li><strong>All Time Buyers:</strong> Increase by 30 percent to capture more repeat buyer revenue</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Expected Impact: Additional 20 to 30 purchases per week at 4 to 6x ROAS.</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>Day 2: Checkout Abandonment Investigation</h4>
+                <p><strong>The Issue:</strong> 35.93 percent IC to Purchase rate is leaving significant revenue on the table.</p>
+                <p style="margin-top: 10px;"><strong>Actions:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>Review Shopify checkout analytics for abandonment points</li>
+                    <li>Check shipping cost visibility (are customers seeing high costs at checkout?)</li>
+                    <li>Test adding PayPal and Apple Pay if not already enabled</li>
+                    <li>Consider free shipping threshold (e.g., Free shipping over $75)</li>
+                    <li>Implement or review abandoned cart email sequence</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #cc5b27;">Impact: Improving checkout completion from 36 percent to 50 percent could add 550 plus purchases monthly without additional ad spend.</p>
+            </div>
+
+            <div style="background: #f59e0b; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
+                <h3 style="color: white; margin-top: 0;">STRUCTURAL IMPROVEMENTS (Day 3 to 5)</h3>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>Day 3: Campaign Restructuring</h4>
+                <p><strong>Current Issue:</strong> Campaign naming is inconsistent. Multiple campaigns running similar objectives competing with each other.</p>
+                <p style="margin-top: 10px;"><strong>Proposed Structure:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li><strong>TOF | Prospecting:</strong> Cold traffic acquisition (expect 1.5 to 2.5x ROAS)</li>
+                    <li><strong>MOF | Engagement:</strong> Video viewers, engagers, page visitors (expect 2.5 to 3.5x ROAS)</li>
+                    <li><strong>BOF | Retargeting:</strong> Website visitors, add to cart, product viewers (expect 4 to 6x ROAS)</li>
+                    <li><strong>CRM | Repeat Buyers:</strong> All time buyers, email list (expect 5 to 7x ROAS)</li>
+                    <li><strong>SALE | Seasonal:</strong> Black Friday, Birthday Sale, promotional campaigns</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>Day 4: Creative Testing Framework</h4>
+                <p><strong>Action:</strong> Create 5 variations of your winning CREATIVE 1:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Same visual, different hook text (test 3 hooks)</li>
+                    <li>Same hook, different primary text length (short vs long)</li>
+                    <li>Add urgency overlay (Limited Stock or Selling Fast)</li>
+                    <li>Test founder (Gin) intro vs product only opening</li>
+                    <li>Square vs vertical format testing</li>
+                </ul>
+                <p style="margin-top: 10px;">Run as CBO with $50 per day for 7 days to identify next hero creative.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>Day 5: CRO Quick Wins Implementation</h4>
+                <p><strong>Actions:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Add trust summary to cart page</li>
+                    <li>Add guarantee badge near checkout button</li>
+                    <li>Add testimonial snippet at checkout</li>
+                    <li>Review and update homepage hero messaging</li>
+                </ul>
+            </div>
+
+            <div style="background: #10b981; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
+                <h3 style="color: white; margin-top: 0;">OPTIMISATION AND TRACKING (Day 6 to 7)</h3>
+            </div>
+
+            <div class="action-item priority-low">
+                <h4>Day 6: Landing Page Speed Audit</h4>
+                <p><strong>Issue:</strong> 10.56 percent click to LPV drop is costing approximately 1,900 landing page views.</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Run Google PageSpeed Insights on top 5 landing pages</li>
+                    <li>Check mobile load time (target: under 3 seconds)</li>
+                    <li>Compress images and review Shopify theme speed</li>
+                    <li>Verify Meta pixel is firing correctly on all pages</li>
+                </ul>
+            </div>
+
+            <div class="action-item priority-low">
+                <h4>Day 7: Triple Whale Reconciliation</h4>
+                <p><strong>Action:</strong> Cross reference Meta Ads Manager data with Triple Whale to ensure:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Attribution windows are aligned (7 day click, 1 day view)</li>
+                    <li>Revenue tracking matches Shopify orders</li>
+                    <li>No significant discrepancies in purchase counts</li>
+                    <li>CAPI is properly configured and sending events</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- SLIDE 10: 90 DAY ROADMAP -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>90 Day Strategic Roadmap</h2>
+                <p class="subtitle">Path to 4x ROAS and 20 Percent Net Profit</p>
+            </div>
+
+            <h3>Phase 1: Stabilisation (Weeks 1 to 4)</h3>
+            <div class="action-item">
+                <h4>Goals:</h4>
+                <ul style="margin-left: 20px;">
+                    <li>Increase blended ROAS from 2.75x to 3.2 to 3.5x</li>
+                    <li>Reduce CPA from $38.36 to under $32</li>
+                    <li>Improve checkout completion rate from 36 percent to 45 percent</li>
+                    <li>Establish proper campaign structure</li>
+                    <li>Implement priority CRO changes (homepage hero, cart trust, checkout optimisation)</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Budget Allocation:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>Retargeting and BOF: 50 percent of budget</li>
+                    <li>MOF: 25 percent of budget</li>
+                    <li>TOF and Prospecting: 20 percent of budget</li>
+                    <li>Testing: 5 percent of budget</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 30px;">Phase 2: Optimisation (Weeks 5 to 8)</h3>
+            <div class="action-item">
+                <h4>Goals:</h4>
+                <ul style="margin-left: 20px;">
+                    <li>Scale daily spend from current level to $2,000 to $2,500 per day</li>
+                    <li>Maintain or improve ROAS while scaling</li>
+                    <li>Launch 3 to 5 new winning creatives through testing</li>
+                    <li>Build Lookalike audiences from best customers</li>
+                    <li>Complete Phase 2 CRO: cart improvements, cross sells, checkout enhancements</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Key Initiatives:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>Creator content program: Recruit 5 to 10 micro influencers for authentic UGC</li>
+                    <li>Gin led video content: Founder story, education, behind the scenes</li>
+                    <li>Bundle optimisation: Test higher AOV bundles to improve unit economics</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 30px;">Phase 3: Scale (Weeks 9 to 12)</h3>
+            <div class="action-item">
+                <h4>Goals:</h4>
+                <ul style="margin-left: 20px;">
+                    <li>Achieve consistent 3.5 to 4x blended ROAS</li>
+                    <li>Scale to $3,000 to $3,500 per day ad spend profitably</li>
+                    <li>Approach 20 percent net profit target</li>
+                    <li>Prepare for next major sale event (Birthday Sale in May)</li>
+                    <li>Complete Phase 3 CRO: concern based landing pages, comparison page, quiz optimisation</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Expansion Opportunities:</strong></p>
+                <ul style="margin-left: 20px;">
+                    <li>Google Ads: Launch branded and product search campaigns</li>
+                    <li>TikTok: Test platform with proven creative formats</li>
+                    <li>Email and SMS integration: Coordinate ad messaging with retention campaigns</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 40px;">Target Metrics by End of Q1 2026</h3>
+            <div class="metric-grid">
+                <div class="metric-card success">
+                    <div class="metric-label">Monthly Ad Spend</div>
+                    <div class="metric-value">$75 to $100K</div>
+                    <div class="metric-change">Up from $54K current</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Monthly Revenue (Paid)</div>
+                    <div class="metric-value">$300 to $400K</div>
+                    <div class="metric-change">At 4x ROAS</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Blended ROAS</div>
+                    <div class="metric-value">3.8 to 4.2x</div>
+                    <div class="metric-change">Up from 2.75x</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Target CPA</div>
+                    <div class="metric-value">Under $28</div>
+                    <div class="metric-change">Down from $38.36</div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <strong>Revenue Projection:</strong> Based on current AOV of $105.48 and improving to 4x ROAS at $90K monthly spend, you are looking at approximately $360K monthly paid revenue. Combined with organic and email revenue, this puts you on track for $4 to $5M annual run rate, achieving Gin's goal of doubling the business within 12 to 18 months.
+            </div>
+        </div>
+
+        <!-- SLIDE: PAGESPEED PERFORMANCE ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-cro">Technical</span> PageSpeed Performance Analysis</h2>
+                <p class="subtitle">Core Web Vitals and Site Speed Impact on Conversions</p>
+            </div>
+
+            <div style="background: #fef3c7; border-left: 6px solid #f59e0b; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #92400e;">Why Page Speed Matters for E-commerce</h3>
+                <p style="font-size: 16px; line-height: 1.6; color: #92400e;">Every 1 second delay in page load time reduces conversions by 7 percent on average. With your 10.56 percent click to landing page view drop rate, slow page speed could be a contributing factor. Google also uses Core Web Vitals as a ranking factor for SEO.</p>
+            </div>
+
+            <h3>PageSpeed Scores Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Mobile Score</th>
+                        <th>Desktop Score</th>
+                        <th>Core Web Vitals</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fef2f2;">
+                        <td><strong>Homepage</strong></td>
+                        <td style="color: #dc2626; font-weight: bold;">42/100</td>
+                        <td style="color: #f59e0b;">73/100</td>
+                        <td style="color: #059669;">Passed</td>
+                        <td><span style="background: #dc2626; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px;">HIGH</span></td>
+                    </tr>
+                    <tr style="background: #fefce8;">
+                        <td><strong>Collections: All</strong></td>
+                        <td style="color: #dc2626; font-weight: bold;">28/100</td>
+                        <td style="color: #f59e0b;">47/100</td>
+                        <td style="color: #059669;">Passed</td>
+                        <td><span style="background: #dc2626; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px;">HIGH</span></td>
+                    </tr>
+                    <tr style="background: #fefce8;">
+                        <td><strong>Collections: Best Sellers</strong></td>
+                        <td style="color: #f59e0b; font-weight: bold;">48/100</td>
+                        <td style="color: #f59e0b;">77/100</td>
+                        <td style="color: #059669;">Passed</td>
+                        <td><span style="background: #f59e0b; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px;">MEDIUM</span></td>
+                    </tr>
+                    <tr style="background: #fefce8;">
+                        <td><strong>Product: Mini Dermaroller</strong></td>
+                        <td style="color: #dc2626; font-weight: bold;">36/100</td>
+                        <td style="color: #f59e0b;">54/100</td>
+                        <td style="color: #059669;">Passed</td>
+                        <td><span style="background: #dc2626; color: white; padding: 2px 8px; border-radius: 4px; font-size: 12px;">HIGH</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Core Web Vitals Details (Mobile)</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Homepage LCP</div>
+                    <div class="metric-value" style="font-size: 28px;">2.2s</div>
+                    <div class="metric-change" style="color: #f59e0b;">Target: Under 2.5s ✓</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Collections LCP</div>
+                    <div class="metric-value" style="font-size: 28px;">5.7s</div>
+                    <div class="metric-change" style="color: #dc2626;">Target: Under 2.5s ✗</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Product Page LCP</div>
+                    <div class="metric-value" style="font-size: 28px;">0.7s</div>
+                    <div class="metric-change" style="color: #059669;">Excellent ✓</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Avg Speed Index</div>
+                    <div class="metric-value" style="font-size: 28px;">3.0s</div>
+                    <div class="metric-change">Mobile experience</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Key Performance Issues Identified</h3>
+            <div class="two-column">
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Render Blocking Resources</h4>
+                        <p>Multiple CSS and JavaScript files blocking initial render. Estimated savings: 300 to 500ms.</p>
+                        <p><strong>Fix:</strong> Defer non critical CSS/JS, inline critical CSS</p>
+                    </div>
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Unused JavaScript</h4>
+                        <p>Large amount of unused JS being loaded. Apps and widgets adding bloat.</p>
+                        <p><strong>Fix:</strong> Audit Shopify apps, remove unused, lazy load widgets</p>
+                    </div>
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">Image Optimisation</h4>
+                        <p>Some images not using next gen formats (WebP/AVIF).</p>
+                        <p><strong>Fix:</strong> Enable Shopify image CDN optimisation, compress uploads</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #dc2626; margin-bottom: 15px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Total Blocking Time</h4>
+                        <p>Homepage: 300ms, Collections: 1,750ms (very high), Product: 960ms</p>
+                        <p><strong>Fix:</strong> Break up long tasks, code split JavaScript</p>
+                    </div>
+                    <div class="action-item" style="border-left: 6px solid #f59e0b; margin-bottom: 15px;">
+                        <h4 style="color: #f59e0b; margin-top: 0;">DOM Size</h4>
+                        <p>Large DOM on collection pages slowing interactivity.</p>
+                        <p><strong>Fix:</strong> Implement lazy loading for product grids, virtual scrolling</p>
+                    </div>
+                    <div class="action-item" style="border-left: 6px solid #059669; margin-bottom: 15px;">
+                        <h4 style="color: #059669; margin-top: 0;">Positive: Core Web Vitals Pass</h4>
+                        <p>All pages pass Google's Core Web Vitals assessment for real user data, which protects SEO rankings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Conversion Impact Estimate:</strong> With mobile scores in the 28 to 48 range, you are likely losing 5 to 10 percent of mobile conversions to slow load times. Given that mobile traffic typically represents 70 plus percent of e-commerce traffic, improving mobile scores to 60 plus could recover 3 to 5 percent of lost conversions, translating to approximately $10K to $15K additional monthly revenue based on current volume.
+            </div>
+        </div>
+
+        <!-- SLIDE: TRIPLE WHALE ATTRIBUTION ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">Attribution</span> Triple Whale Channel Analysis</h2>
+                <p class="subtitle">90 Day Attribution Data: Aug 30 to Nov 27, 2025</p>
+            </div>
+
+            <div style="background: #f0f9ff; border-left: 6px solid #0ea5e9; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #0369a1;">Attribution Reality Check</h3>
+                <p style="font-size: 16px; line-height: 1.6; color: #0369a1;">Triple Whale provides a more holistic view of attribution compared to in platform reporting. This data reveals the true customer journey and shows which channels are actually driving revenue when accounting for multi touch attribution.</p>
+            </div>
+
+            <h3>90 Day Revenue by Channel</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Revenue</th>
+                        <th>% of Total</th>
+                        <th>Purchases</th>
+                        <th>ROAS (TW)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Organic and Social</strong></td>
+                        <td>$256,599</td>
+                        <td>26.3%</td>
+                        <td>2,439</td>
+                        <td>Organic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Klaviyo (Email)</strong></td>
+                        <td>$187,920</td>
+                        <td>19.2%</td>
+                        <td>1,711</td>
+                        <td>Organic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Ads</strong></td>
+                        <td>$151,085</td>
+                        <td>15.5%</td>
+                        <td>1,702</td>
+                        <td style="color: #059669; font-weight: bold;">4.40x</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>Meta Ads</strong></td>
+                        <td>$146,725</td>
+                        <td>15.0%</td>
+                        <td>1,602</td>
+                        <td style="color: #f59e0b; font-weight: bold;">1.23x</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Direct Traffic</strong></td>
+                        <td>$128,065</td>
+                        <td>13.1%</td>
+                        <td>1,218</td>
+                        <td>Organic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smile Rewards</strong></td>
+                        <td>$26,517</td>
+                        <td>2.7%</td>
+                        <td>201</td>
+                        <td>Organic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>YouTube</strong></td>
+                        <td>$24,317</td>
+                        <td>2.5%</td>
+                        <td>239</td>
+                        <td>Organic</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Other</strong></td>
+                        <td>$55,925</td>
+                        <td>5.7%</td>
+                        <td>763</td>
+                        <td>Various</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: #162642; color: white;">
+                        <td><strong>TOTAL</strong></td>
+                        <td><strong>$977,153</strong></td>
+                        <td><strong>100%</strong></td>
+                        <td><strong>9,875</strong></td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3 style="margin-top: 40px;">Paid vs Organic Revenue Split</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Paid Channels</div>
+                    <div class="metric-value" style="font-size: 28px;">30.5%</div>
+                    <div class="metric-change">$297,810 (Meta + Google)</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Organic Channels</div>
+                    <div class="metric-value" style="font-size: 28px;">69.5%</div>
+                    <div class="metric-change">$679,343 (Email, Social, Direct)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Ad Spend</div>
+                    <div class="metric-value" style="font-size: 28px;">$154K</div>
+                    <div class="metric-change">90 day period</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Blended ROAS</div>
+                    <div class="metric-value" style="font-size: 28px;">6.34x</div>
+                    <div class="metric-change">Including organic</div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Key Insight:</strong> Gin Amber Beauty has exceptional organic reach. Nearly 70 percent of revenue comes from non paid channels (email, organic social, direct traffic). This is a significant strength, but it also means Meta Ads efficiency is critical. The Triple Whale ROAS of 1.23x for Meta suggests significant attribution is being lost to other channels (view through, assisted conversions). The ads are likely doing more work than the last click attribution suggests.
+            </div>
+        </div>
+
+        <!-- SLIDE: META ATTRIBUTION DEEP DIVE -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">Attribution</span> Meta Ads: Understanding True Attribution</h2>
+                <p class="subtitle">Why Triple Whale Shows Different Numbers Than Ads Manager</p>
+            </div>
+
+            <h3>Meta Ads Attribution Comparison</h3>
+            <div class="two-column">
+                <div style="background: #dbeafe; padding: 25px; border-radius: 12px; border: 2px solid #3b82f6;">
+                    <h4 style="color: #1d4ed8; margin-top: 0; text-align: center;">Facebook Ads Manager</h4>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <div style="font-size: 48px; font-weight: bold; color: #1d4ed8;">2.21x</div>
+                        <div style="color: #666;">Reported ROAS (90 day)</div>
+                    </div>
+                    <table style="width: 100%; font-size: 14px;">
+                        <tr><td>Attribution Window</td><td style="text-align: right;">7 day click, 1 day view</td></tr>
+                        <tr><td>Model Type</td><td style="text-align: right;">Last touch (Meta favoured)</td></tr>
+                        <tr><td>View Through</td><td style="text-align: right;">Included</td></tr>
+                        <tr><td>Cross Device</td><td style="text-align: right;">Modelled</td></tr>
+                    </table>
+                </div>
+                <div style="background: #fef3c7; padding: 25px; border-radius: 12px; border: 2px solid #f59e0b;">
+                    <h4 style="color: #b45309; margin-top: 0; text-align: center;">Triple Whale</h4>
+                    <div style="text-align: center; margin: 20px 0;">
+                        <div style="font-size: 48px; font-weight: bold; color: #b45309;">1.23x</div>
+                        <div style="color: #666;">Pixel ROAS (90 day)</div>
+                    </div>
+                    <table style="width: 100%; font-size: 14px;">
+                        <tr><td>Attribution Window</td><td style="text-align: right;">First party pixel</td></tr>
+                        <tr><td>Model Type</td><td style="text-align: right;">Multi touch aware</td></tr>
+                        <tr><td>View Through</td><td style="text-align: right;">Excluded</td></tr>
+                        <tr><td>Cross Device</td><td style="text-align: right;">Cookie based</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">What the Attribution Gap Tells Us</h3>
+            <div class="action-item" style="border-left: 6px solid #f59e0b;">
+                <h4 style="color: #f59e0b; margin-top: 0;">The 0.98x ROAS Discrepancy Explained</h4>
+                <p>The gap between Facebook's 2.21x and Triple Whale's 1.23x is significant but expected. This happens because:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>View through attribution:</strong> Facebook counts users who saw an ad but did not click, then converted within 1 day</li>
+                    <li><strong>Multi channel journeys:</strong> User sees Meta ad → leaves → returns via email/Google/direct → Triple Whale credits last touch</li>
+                    <li><strong>iOS 14.5 limitations:</strong> Some conversions cannot be tracked back to Meta due to privacy changes</li>
+                    <li><strong>Assisted conversions:</strong> Meta is doing awareness work that other channels are getting credit for</li>
+                </ul>
+            </div>
+
+            <div class="action-item" style="border-left: 6px solid #0ea5e9;">
+                <h4 style="color: #0ea5e9; margin-top: 0;">Meta's True Role in Your Marketing Mix</h4>
+                <p>The data suggests Meta Ads are functioning primarily as a <strong>demand generation and awareness engine</strong> rather than a direct response channel. This is actually appropriate for your business because:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Microneedling requires education before purchase (not impulse buy)</li>
+                    <li>Gin's founder content builds trust over multiple touchpoints</li>
+                    <li>Strong organic and email channels capture the demand Meta creates</li>
+                    <li>High AOV ($105) products typically have longer consideration cycles</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Implication:</strong> Optimise Meta for efficiency, but judge success by blended metrics not just in platform ROAS. Your strong Klaviyo (19% of revenue) and organic channels (26% of revenue) are capturing Meta driven demand.</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">Meta Ads 90 Day Performance Summary</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Meta Spend</div>
+                    <div class="metric-value" style="font-size: 28px;">$119,732</div>
+                    <div class="metric-change">~$1,330/day average</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Meta Attributed Revenue</div>
+                    <div class="metric-value" style="font-size: 28px;">$146,725</div>
+                    <div class="metric-change">Triple Whale pixel</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Meta Purchases</div>
+                    <div class="metric-value" style="font-size: 28px;">1,602</div>
+                    <div class="metric-change">16.2% of total purchases</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Meta CPA (TW)</div>
+                    <div class="metric-value" style="font-size: 28px;">$74.74</div>
+                    <div class="metric-change">Needs improvement</div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Key Takeaway:</strong> Do not panic about the Triple Whale ROAS being lower than Ads Manager. Focus on improving Meta Ads efficiency through the campaign restructure and creative optimisation in this audit. The goal is to increase in platform ROAS from 2.21x toward 3x+, which should translate to improved Triple Whale attribution as well. Monitor blended ROAS (currently 6.34x including organic) as your north star metric.
+            </div>
+        </div>
+
+        <!-- SLIDE: EMAIL AND RETENTION ANALYSIS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-cro">Retention</span> Email and Customer Retention Analysis</h2>
+                <p class="subtitle">Klaviyo, Loyalty Programs, and Repeat Purchase Behaviour</p>
+            </div>
+
+            <h3>Email Marketing Performance (Klaviyo)</h3>
+            <div class="metric-grid">
+                <div class="metric-card accent">
+                    <div class="metric-label">Email Revenue (90d)</div>
+                    <div class="metric-value" style="font-size: 28px;">$187,920</div>
+                    <div class="metric-change">19.2% of total revenue</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Email Purchases</div>
+                    <div class="metric-value" style="font-size: 28px;">1,711</div>
+                    <div class="metric-change">17.3% of all purchases</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Email AOV</div>
+                    <div class="metric-value" style="font-size: 28px;">$97.21</div>
+                    <div class="metric-change">Below site average $105</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Email CPA</div>
+                    <div class="metric-value" style="font-size: 28px;">$0</div>
+                    <div class="metric-change">Pure profit channel</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Retention Revenue Channels</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Revenue (90d)</th>
+                        <th>Purchases</th>
+                        <th>AOV</th>
+                        <th>Insight</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Klaviyo (Email)</strong></td>
+                        <td>$187,920</td>
+                        <td>1,711</td>
+                        <td>$97.21</td>
+                        <td>Primary retention driver</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Smile Rewards (Loyalty)</strong></td>
+                        <td>$26,517</td>
+                        <td>201</td>
+                        <td>$107.15</td>
+                        <td>High AOV loyalty members</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Spently (Transactional)</strong></td>
+                        <td>$18,583</td>
+                        <td>192</td>
+                        <td>$85.45</td>
+                        <td>Order notification conversions</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Direct Traffic</strong></td>
+                        <td>$128,065</td>
+                        <td>1,218</td>
+                        <td>$102.93</td>
+                        <td>Brand recall, repeat buyers</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr style="background: #f0f9ff;">
+                        <td><strong>Total Retention</strong></td>
+                        <td><strong>$361,085</strong></td>
+                        <td><strong>3,322</strong></td>
+                        <td><strong>$98.54</strong></td>
+                        <td><strong>36.9% of total revenue</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <h3 style="margin-top: 40px;">Top Product Bundles (Frequently Bought Together)</h3>
+            <div class="two-column">
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #059669; margin-bottom: 15px;">
+                        <h4 style="margin-top: 0;">Bundle 1: Mini + Replaceable Head</h4>
+                        <p>0.25mm Mini Dermaroller + 0.5mm Replaceable Head</p>
+                        <p><strong>AOV: $173.24</strong> | 11 purchases | $1,906 revenue</p>
+                        <p style="margin-top: 5px; color: #059669;">65% higher than average AOV</p>
+                    </div>
+                    <div class="action-item" style="border-left: 6px solid #059669; margin-bottom: 15px;">
+                        <h4 style="margin-top: 0;">Bundle 2: Replaceable Head + 1.0mm Head</h4>
+                        <p>0.5mm Replaceable Head + 1.0mm Head Replacement</p>
+                        <p><strong>AOV: $95.72</strong> | 10 purchases | $957 revenue</p>
+                        <p style="margin-top: 5px; color: #666;">Progressive depth upgrade path</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="action-item" style="border-left: 6px solid #059669; margin-bottom: 15px;">
+                        <h4 style="margin-top: 0;">Bundle 3: Mini + 0.5mm Head Replacement</h4>
+                        <p>0.25mm Mini + 0.5mm Head Replacement</p>
+                        <p><strong>AOV: $165.07</strong> | 9 purchases | $1,486 revenue</p>
+                        <p style="margin-top: 5px; color: #059669;">57% higher than average AOV</p>
+                    </div>
+                    <div class="action-item" style="border-left: 6px solid #059669; margin-bottom: 15px;">
+                        <h4 style="margin-top: 0;">Bundle 4: Replaceable Head + Cleanser</h4>
+                        <p>0.5mm Replaceable Head + Natural Foam Cleanser</p>
+                        <p><strong>AOV: $135.78</strong> | 9 purchases | $1,222 revenue</p>
+                        <p style="margin-top: 5px; color: #666;">100% new customers on this bundle</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Bundle Strategy Opportunity:</strong> Customers who buy bundles have 57 to 65 percent higher AOV. The data shows clear progression paths (Mini → 0.5mm → 1.0mm) and product affinity (tools + serums/cleanser). Recommend creating pre made bundle offers on product pages and in email flows to increase AOV from $105 toward $140 plus.
+            </div>
+        </div>
+
+        <!-- SLIDE: 12 MONTH TRENDS -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">Trends</span> 12 Month Performance Overview</h2>
+                <p class="subtitle">Year over Year Attribution Analysis: Nov 2024 to Nov 2025</p>
+            </div>
+
+            <h3>Annual Revenue Summary (Triple Whale)</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Revenue (12m)</div>
+                    <div class="metric-value" style="font-size: 28px;">$3.9M</div>
+                    <div class="metric-change">Aligned with Gin's stated ~$2.5M prior year</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Purchases</div>
+                    <div class="metric-value" style="font-size: 28px;">41,873</div>
+                    <div class="metric-change">Average $93.15 per order</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Total Ad Spend</div>
+                    <div class="metric-value" style="font-size: 28px;">$541K</div>
+                    <div class="metric-change">~$45K monthly average</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Blended ROAS</div>
+                    <div class="metric-value" style="font-size: 28px;">7.21x</div>
+                    <div class="metric-change">Including all channels</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">12 Month Channel Mix</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Channel</th>
+                        <th>Revenue</th>
+                        <th>% Share</th>
+                        <th>ROAS</th>
+                        <th>Trend</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Organic and Social</strong></td>
+                        <td>$1,002,324</td>
+                        <td>25.7%</td>
+                        <td>Organic</td>
+                        <td>Stable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Klaviyo</strong></td>
+                        <td>$618,428</td>
+                        <td>15.8%</td>
+                        <td>Organic</td>
+                        <td>Growing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Meta Ads</strong></td>
+                        <td>$606,824</td>
+                        <td>15.5%</td>
+                        <td>1.53x</td>
+                        <td style="color: #dc2626;">Declining efficiency</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google Ads</strong></td>
+                        <td>$597,324</td>
+                        <td>15.3%</td>
+                        <td>4.12x</td>
+                        <td style="color: #059669;">Strong performer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Non Attributed</strong></td>
+                        <td>$319,072</td>
+                        <td>8.2%</td>
+                        <td>-</td>
+                        <td>Tracking gap</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Direct</strong></td>
+                        <td>$258,456</td>
+                        <td>6.6%</td>
+                        <td>Organic</td>
+                        <td>Stable</td>
+                    </tr>
+                    <tr>
+                        <td><strong>YouTube</strong></td>
+                        <td>$173,762</td>
+                        <td>4.5%</td>
+                        <td>Organic</td>
+                        <td style="color: #059669;">Growing</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Other</strong></td>
+                        <td>$326,350</td>
+                        <td>8.4%</td>
+                        <td>Various</td>
+                        <td>-</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Strategic Observations</h3>
+            <div class="two-column">
+                <div>
+                    <div class="cro-box">
+                        <h4 style="color: #059669; margin-top: 0;">Strengths Supporting Meta Success</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Strong organic foundation (51% organic revenue) validates brand appeal</li>
+                            <li>Email contributing $620K annually captures Meta driven demand</li>
+                            <li>YouTube organic ($174K) proves Gin's video content resonates</li>
+                            <li>Blended ROAS of 7.2x is healthy overall</li>
+                            <li>High LTV ($89 to $164) justifies higher Meta CPA targets</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: #fef2f2; padding: 20px; border-radius: 8px;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Meta Ads Concerns</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li>Meta ROAS declining (1.53x TW vs needed 2.5x+)</li>
+                            <li>High non attributed revenue (8.2%) suggests tracking gaps</li>
+                            <li>View through attribution inflating Ads Manager numbers</li>
+                            <li>Dependency on organic could be risky if algorithm changes</li>
+                            <li>Campaign structure needs consolidation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>12 Month Takeaway:</strong> The business is fundamentally healthy with strong organic reach and customer retention. However, Meta Ads efficiency has declined and needs urgent optimisation. The 1.53x Triple Whale ROAS (12m) is below the 1.8x breakeven Gin mentioned. Priority should be improving Meta efficiency through the campaign restructure and creative refresh outlined in this audit. The strong email and organic channels provide a safety net while Meta is optimised.
+            </div>
+        </div>
+
+        <!-- SLIDE 11: CLOSING SUMMARY -->
+        <div class="slide">
+            <div class="slide-header">
+                <h2>Closing Summary and Next Steps</h2>
+            </div>
+
+            <h3>Key Findings Recap</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669; margin-bottom: 15px;">What Is Working</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>BOF campaigns:</strong> 4.5 to 4.6x ROAS</li>
+                        <li><strong>All Time Buyers retargeting:</strong> 6.08x ROAS</li>
+                        <li><strong>CREATIVE 1:</strong> 5.99 to 7.19x ROAS across placements</li>
+                        <li><strong>EBF sale campaigns:</strong> 3.66 to 3.85x ROAS</li>
+                        <li><strong>LPV to ATC rate:</strong> 48.10 percent (exceptional)</li>
+                        <li><strong>ATC to IC rate:</strong> 50.94 percent (excellent)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #dc2626; margin-bottom: 15px;">What Needs Attention</h4>
+                    <ul style="margin-left: 20px; line-height: 1.8;">
+                        <li><strong>ABO Test campaign:</strong> 1.58x ROAS, $14.5K underperforming</li>
+                        <li><strong>CBO Best Ads:</strong> 1.85x ROAS, $9K underperforming</li>
+                        <li><strong>Checkout abandonment:</strong> 64 percent drop at final step</li>
+                        <li><strong>Click to LPV drop:</strong> 10.56 percent traffic loss</li>
+                        <li><strong>3 tips creative:</strong> High spend, below breakeven</li>
+                        <li><strong>Homepage messaging:</strong> Value proposition not clear</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Immediate Priority Checklist</h3>
+            
+            <div style="background: #dc2626; color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h4 style="color: white; margin-top: 0; margin-bottom: 15px;">DO THIS WEEK (Critical Actions)</h4>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li>Pause or cut budget on 18.06 | ABO Test campaign</li>
+                    <li>Review and trim 20.10 | CBO | Best Ads to top performers only</li>
+                    <li>Increase budget on 13.11 | ABO | EBF (BOF ad set) by 25 percent</li>
+                    <li>Increase budget on All Time Buyers by 30 percent</li>
+                    <li>Pause 3 tips and Marionete Lines creative variations</li>
+                    <li>Investigate checkout abandonment in Shopify</li>
+                    <li>Add trust summary to cart page</li>
+                    <li>Add guarantee and testimonial to checkout</li>
+                </ol>
+            </div>
+
+            <h3 style="margin-top: 30px;">Expected Outcomes (30 Day)</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Current Blended ROAS</div>
+                    <div class="metric-value">2.75x</div>
+                    <div class="metric-change">October to November 2025</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Target Blended ROAS</div>
+                    <div class="metric-value">3.2 to 3.5x</div>
+                    <div class="metric-change">By end of December 2025</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Current CPA</div>
+                    <div class="metric-value">$38.36</div>
+                    <div class="metric-change">Too high for profitability</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Target CPA</div>
+                    <div class="metric-value">Under $32</div>
+                    <div class="metric-change">Sustainable for growth</div>
+                </div>
+            </div>
+
+            <div style="background: #162642; color: white; padding: 30px; border-radius: 12px; margin-top: 40px; text-align: center;">
+                <h3 style="color: white; margin-bottom: 20px;">The Path Forward</h3>
+                <p style="font-size: 18px; line-height: 1.6; margin-bottom: 20px;">Gin Amber Beauty has a solid foundation with strong product market fit, an engaged community, excellent mid funnel metrics, and proven winning creatives. The opportunity lies in execution. By reallocating budget from underperformers to winners, and implementing the CRO improvements to address checkout abandonment, you can realistically achieve 3.5 to 4x ROAS within 60 days, putting you firmly on track for that 20 percent net profit goal.</p>
+                <p style="font-size: 16px; opacity: 0.9;">Your brand story is powerful. Gin's authenticity and the real dermarollers positioning is a genuine differentiator. Now we align the ads performance and website experience to match the quality of your products.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: #162642; border-radius: 12px;">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" style="width: 180px;">
+                <p style="color: rgba(255,255,255,0.8); margin-top: 15px;">Report prepared November 28, 2025</p>
+                <p style="color: rgba(255,255,255,0.6); margin-top: 5px; font-size: 14px;">Gin Amber Beauty: Meta Ads Deep Audit, Funnel Review and CRO Analysis</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
