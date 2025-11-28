@@ -336,7 +336,56 @@
             color: #059669;
         }
 
+        /* Navigation Menu Styles */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #162642;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 6px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .nav-menu a:hover {
+            background: #cc5b27;
+        }
+
+        .nav-menu .nav-section {
+            color: #cc5b27;
+            font-weight: bold;
+            padding: 6px 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding-top: 60px;
+        }
+
         @media print {
+            .nav-menu {
+                display: none;
+            }
+            .container {
+                padding-top: 0;
+            }
             .slide {
                 page-break-after: always;
                 margin: 0;
@@ -349,10 +398,32 @@
     </style>
 </head>
 <body>
+    <!-- QUICK NAVIGATION MENU -->
+    <nav class="nav-menu">
+        <span class="nav-section">Overview:</span>
+        <a href="#executive-summary">Executive Summary</a>
+        <a href="#funnel-analysis">Funnel Analysis</a>
+        <span class="nav-section">Performance:</span>
+        <a href="#campaign-performance">Campaigns</a>
+        <a href="#adset-performance">Ad Sets</a>
+        <a href="#creative-performance">Creatives</a>
+        <span class="nav-section">CRO:</span>
+        <a href="#cro-audit">Homepage</a>
+        <a href="#cro-checkout">Checkout</a>
+        <span class="nav-section">Strategy:</span>
+        <a href="#competitor-analysis">Competitors</a>
+        <a href="#action-plan">7 Day Plan</a>
+        <a href="#roadmap">90 Day Roadmap</a>
+        <span class="nav-section">Attribution:</span>
+        <a href="#triple-whale">Triple Whale</a>
+        <a href="#meta-attribution">Meta Attribution</a>
+        <a href="#closing-summary">Summary</a>
+    </nav>
+
     <div class="container">
         
         <!-- SLIDE 1: COVER -->
-        <div class="slide" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #162642;">
+        <div class="slide" id="cover" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #162642;">
             <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo" style="width: 300px; margin-bottom: 40px;">
             <h1 style="font-size: 48px; margin-bottom: 20px; color: white;">Meta Ads Deep Audit</h1>
             <h1 style="font-size: 48px; margin-bottom: 20px; color: white;">Funnel Review & CRO Analysis</h1>
@@ -362,7 +433,7 @@
         </div>
 
         <!-- SLIDE 2: EXECUTIVE SUMMARY -->
-        <div class="slide">
+        <div class="slide" id="executive-summary">
             <div class="slide-header">
                 <h2>Executive Summary</h2>
             </div>
@@ -849,7 +920,7 @@
         </div>
 
         <!-- SLIDE 5: FUNNEL ANALYSIS -->
-        <div class="slide">
+        <div class="slide" id="funnel-analysis">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-meta">META ADS</span> Funnel Analysis</h2>
                 <p class="subtitle">30 Day Performance Breakdown (Oct 29 to Nov 27, 2025)</p>
@@ -1006,7 +1077,7 @@
         </div>
 
         <!-- SLIDE 6: CAMPAIGN PERFORMANCE -->
-        <div class="slide">
+        <div class="slide" id="campaign-performance">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-meta">META ADS</span> Campaign Performance Analysis</h2>
                 <p class="subtitle">Active Campaign Breakdown (30 Day Period)</p>
@@ -1139,7 +1210,7 @@
         </div>
 
         <!-- SLIDE 7: AD SET PERFORMANCE -->
-        <div class="slide">
+        <div class="slide" id="adset-performance">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-meta">META ADS</span> Ad Set Performance Deep Dive</h2>
                 <p class="subtitle">Top Performers vs Underperformers</p>
@@ -1334,7 +1405,7 @@
         </div>
 
         <!-- SLIDE 8: CREATIVE PERFORMANCE -->
-        <div class="slide">
+        <div class="slide" id="creative-performance">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-meta">META ADS</span> Creative Performance Analysis</h2>
                 <p class="subtitle">Top Ads by ROAS and Spend</p>
@@ -1515,7 +1586,7 @@
         </div>
 
         <!-- SLIDE 7: CRO AUDIT -->
-        <div class="slide">
+        <div class="slide" id="cro-audit">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-cro">CRO</span> Website Conversion Rate Optimisation Audit</h2>
                 <p class="subtitle">Opportunities to Increase Revenue Without Additional Ad Spend</p>
@@ -1675,7 +1746,7 @@
         </div>
 
         <!-- SLIDE 8: CRO CART AND CHECKOUT -->
-        <div class="slide">
+        <div class="slide" id="cro-checkout">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-cro">CRO</span> Cart and Checkout Optimisation</h2>
                 <p class="subtitle">Addressing the 64% Checkout Abandonment Rate</p>
@@ -1978,7 +2049,7 @@
         </div>
 
         <!-- SLIDE 13: COMPETITOR ANALYSIS -->
-        <div class="slide">
+        <div class="slide" id="competitor-analysis">
             <div class="slide-header">
                 <h2>Competitor Ad Analysis</h2>
                 <p class="subtitle">BeautyBio, Banish, StackedSkincare, FaceGym vs Gin Amber Beauty</p>
@@ -2212,7 +2283,7 @@
         </div>
 
         <!-- SLIDE 15: ACTION PLAN -->
-        <div class="slide">
+        <div class="slide" id="action-plan">
             <div class="slide-header">
                 <h2>7 Day Optimisation Action Plan</h2>
                 <p class="subtitle">Prioritised by Impact and Urgency</p>
@@ -2327,7 +2398,7 @@
         </div>
 
         <!-- SLIDE 10: 90 DAY ROADMAP -->
-        <div class="slide">
+        <div class="slide" id="roadmap">
             <div class="slide-header">
                 <h2>90 Day Strategic Roadmap</h2>
                 <p class="subtitle">Path to 4x ROAS and 20 Percent Net Profit</p>
@@ -2539,7 +2610,7 @@
         </div>
 
         <!-- SLIDE: TRIPLE WHALE ATTRIBUTION ANALYSIS -->
-        <div class="slide">
+        <div class="slide" id="triple-whale">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-meta">Attribution</span> Triple Whale Channel Analysis</h2>
                 <p class="subtitle">90 Day Attribution Data: Aug 30 to Nov 27, 2025</p>
@@ -2660,7 +2731,7 @@
         </div>
 
         <!-- SLIDE: META ATTRIBUTION DEEP DIVE -->
-        <div class="slide">
+        <div class="slide" id="meta-attribution">
             <div class="slide-header">
                 <h2><span class="platform-badge badge-meta">Attribution</span> Meta Ads: Understanding True Attribution</h2>
                 <p class="subtitle">Why Triple Whale Shows Different Numbers Than Ads Manager</p>
@@ -3005,7 +3076,7 @@
         </div>
 
         <!-- SLIDE 11: CLOSING SUMMARY -->
-        <div class="slide">
+        <div class="slide" id="closing-summary">
             <div class="slide-header">
                 <h2>Closing Summary and Next Steps</h2>
             </div>
