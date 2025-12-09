@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gin Amber Beauty - Weekly Performance Report | December 9, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #162642;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .slide {
+            background: white;
+            border-radius: 12px;
+            padding: 60px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-height: 600px;
+            page-break-after: always;
+        }
+
+        .slide-header {
+            border-bottom: 4px solid #cc5b27;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #162642;
+            font-size: 42px;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: #162642;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: #cc5b27;
+            font-size: 24px;
+            margin: 30px 0 15px 0;
+            font-weight: 600;
+        }
+
+        h4 {
+            color: #162642;
+            font-size: 18px;
+            margin: 20px 0 10px 0;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #162642 0%, #1e3a5f 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .metric-card.accent {
+            background: linear-gradient(135deg, #cc5b27 0%, #e06a2f 100%);
+        }
+
+        .metric-card.success {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .metric-card.warning {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+
+        .metric-card.danger {
+            background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+        }
+
+        .metric-label {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .metric-value {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .metric-change {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+
+        .metric-change.positive {
+            color: #4ade80;
+        }
+
+        .metric-change.negative {
+            color: #ff6b6b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            font-size: 14px;
+        }
+
+        thead {
+            background: #162642;
+            color: white;
+        }
+
+        th {
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        tr:hover {
+            background: #f9fafb;
+        }
+
+        .status-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .status-good {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .status-warning {
+            background: #fed7aa;
+            color: #92400e;
+        }
+
+        .status-critical {
+            background: #fecaca;
+            color: #991b1b;
+        }
+
+        ul, ol {
+            margin: 20px 0 20px 30px;
+            line-height: 1.8;
+        }
+
+        li {
+            margin-bottom: 12px;
+        }
+
+        .insight-box {
+            background: #f0f9ff;
+            border-left: 4px solid #cc5b27;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .insight-box strong {
+            color: #cc5b27;
+        }
+
+        .action-item {
+            background: white;
+            border: 2px solid #162642;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+
+        .action-item h4 {
+            color: #cc5b27;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .priority-high {
+            border-left: 6px solid #dc2626;
+        }
+
+        .priority-medium {
+            border-left: 6px solid #f59e0b;
+        }
+
+        .priority-low {
+            border-left: 6px solid #10b981;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .platform-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-right: 10px;
+        }
+
+        .badge-meta {
+            background: #1877f2;
+            color: white;
+        }
+
+        .badge-cro {
+            background: #10b981;
+            color: white;
+        }
+
+        .badge-tech {
+            background: #8b5cf6;
+            color: white;
+        }
+
+        .cro-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+
+        .cro-box strong {
+            color: #059669;
+        }
+
+        .week-highlight {
+            background: linear-gradient(135deg, #162642 0%, #1e3a5f 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+
+        .week-highlight h3 {
+            color: #cc5b27;
+            margin-top: 0;
+        }
+
+        .comparison-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-label {
+            opacity: 0.8;
+        }
+
+        .comparison-value {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .comparison-change {
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .change-positive {
+            color: #4ade80;
+        }
+
+        .change-negative {
+            color: #f87171;
+        }
+
+        .app-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #e5e7eb;
+        }
+
+        .app-card.keep {
+            border-left-color: #10b981;
+        }
+
+        .app-card.review {
+            border-left-color: #f59e0b;
+        }
+
+        .app-card.remove {
+            border-left-color: #dc2626;
+        }
+
+        .app-name {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .app-cost {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .app-recommendation {
+            margin-top: 8px;
+            font-size: 13px;
+        }
+
+        /* Navigation Menu Styles */
+        .nav-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #162642;
+            padding: 10px 20px;
+            z-index: 1000;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 6px 12px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 4px;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .nav-menu a:hover {
+            background: #cc5b27;
+        }
+
+        .nav-menu .nav-section {
+            color: #cc5b27;
+            font-weight: bold;
+            padding: 6px 8px;
+            font-size: 11px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding-top: 60px;
+        }
+
+        @media print {
+            .nav-menu {
+                display: none;
+            }
+            .container {
+                padding-top: 0;
+            }
+            .slide {
+                page-break-after: always;
+                margin: 0;
+                box-shadow: none;
+            }
+            body {
+                background: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- QUICK NAVIGATION MENU -->
+    <nav class="nav-menu">
+        <span class="nav-section">Report:</span>
+        <a href="#cover">Cover</a>
+        <a href="#weekly-summary">Weekly Summary</a>
+        <a href="#campaign-performance">Campaigns</a>
+        <a href="#adset-performance">Ad Sets</a>
+        <a href="#creative-performance">Creatives</a>
+        <span class="nav-section">Actions:</span>
+        <a href="#actions-completed">Completed</a>
+        <a href="#this-week-plan">This Week</a>
+        <span class="nav-section">Technical:</span>
+        <a href="#shopify-apps">App Audit</a>
+        <a href="#booster-theme">Booster Theme</a>
+        <a href="#next-steps">Next Steps</a>
+    </nav>
+
+    <div class="container">
+        
+        <!-- SLIDE 1: COVER -->
+        <div class="slide" id="cover" style="display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: #162642;">
+            <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" class="logo" style="width: 300px; margin-bottom: 40px;">
+            <h1 style="font-size: 48px; margin-bottom: 20px; color: white;">Weekly Performance Report</h1>
+            <p class="subtitle" style="font-size: 28px; color: #cc5b27; margin-bottom: 30px;">Gin Amber Beauty</p>
+            <p class="subtitle" style="font-size: 22px; color: white;">Reporting Period: November 9 to December 8, 2025</p>
+            <p class="subtitle" style="font-size: 18px; color: rgba(255,255,255,0.7); margin-top: 20px;">Report Date: December 9, 2025</p>
+            <div style="margin-top: 40px; padding: 20px 40px; background: rgba(204, 91, 39, 0.2); border-radius: 8px;">
+                <p style="color: white; font-size: 16px;">Week 2 of Active Management</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: WEEKLY SUMMARY -->
+        <div class="slide" id="weekly-summary">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Weekly Performance Summary</h2>
+                <p class="subtitle">30 Day Performance Overview: Nov 9 to Dec 8, 2025</p>
+            </div>
+
+            <div style="background: #d1fae5; border-left: 6px solid #10b981; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #065f46;">Account Status: STABILISING</h3>
+                <p style="font-size: 18px; line-height: 1.6; color: #065f46;">The account has transitioned from Black Friday mode back to evergreen operations. We have completed the initial audit actions, pausing underperformers and beginning to scale winners. The 30 day ROAS of 2.03x reflects the mixed performance of legacy campaigns that are being restructured. Key focus this week is aggressive pruning of sub-2x performers and budget reallocation to proven winners delivering 3.5x to 5.0x ROAS.</p>
+            </div>
+
+            <h3>30 Day Account Overview</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Total Ad Spend</div>
+                    <div class="metric-value">$45,696</div>
+                    <div class="metric-change">$1,523/day average</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Total Purchases</div>
+                    <div class="metric-value">957</div>
+                    <div class="metric-change">Across all campaigns</div>
+                </div>
+                <div class="metric-card warning">
+                    <div class="metric-label">Blended ROAS</div>
+                    <div class="metric-value">2.20x</div>
+                    <div class="metric-change">Target: 4.0 to 4.5x</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Blended CPA</div>
+                    <div class="metric-value">$47.75</div>
+                    <div class="metric-change">Target: Under $32</div>
+                </div>
+            </div>
+
+            <div class="metric-grid">
+                <div class="metric-card success">
+                    <div class="metric-label">Total Revenue</div>
+                    <div class="metric-value">$100,035</div>
+                    <div class="metric-change">Meta attributed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Average Order Value</div>
+                    <div class="metric-value">$104.53</div>
+                    <div class="metric-change">Slightly above baseline $75</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">CTR</div>
+                    <div class="metric-value">1.47%</div>
+                    <div class="metric-change">Improving toward 1.5% target</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">CPM</div>
+                    <div class="metric-value">$46.24</div>
+                    <div class="metric-change">Reasonable for skincare</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Week on Week Comparison</h3>
+            <div class="week-highlight">
+                <table style="width: 100%; border-collapse: collapse; background: transparent; color: white;">
+                    <thead>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);">
+                            <th style="text-align: left; padding: 15px 10px; width: 25%; font-weight: 600; opacity: 0.9; background: transparent; color: white;">Metric</th>
+                            <th style="text-align: center; padding: 15px 10px; width: 25%; font-weight: 600; opacity: 0.9; background: transparent; color: white;">This Period</th>
+                            <th style="text-align: center; padding: 15px 10px; width: 25%; font-weight: 600; opacity: 0.9; background: transparent; color: white;">Previous Audit</th>
+                            <th style="text-align: right; padding: 15px 10px; width: 25%; font-weight: 600; opacity: 0.9; background: transparent; color: white;">Change</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="text-align: left; padding: 15px 10px; background: transparent; color: rgba(255,255,255,0.8); border: none;">ROAS</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">2.20x</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">2.75x</td>
+                            <td style="text-align: right; padding: 15px 10px; font-size: 14px; background: transparent; color: #f87171; border: none;">Post-BF normalisation</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="text-align: left; padding: 15px 10px; background: transparent; color: rgba(255,255,255,0.8); border: none;">CPA</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">$47.75</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">$38.36</td>
+                            <td style="text-align: right; padding: 15px 10px; font-size: 14px; background: transparent; color: #f87171; border: none;">Needs improvement</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                            <td style="text-align: left; padding: 15px 10px; background: transparent; color: rgba(255,255,255,0.8); border: none;">CTR</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">1.47%</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">1.20%</td>
+                            <td style="text-align: right; padding: 15px 10px; font-size: 14px; background: transparent; color: #4ade80; border: none;">+22% improvement</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: left; padding: 15px 10px; background: transparent; color: rgba(255,255,255,0.8); border: none;">AOV</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">$104.53</td>
+                            <td style="text-align: center; padding: 15px 10px; font-weight: 700; font-size: 18px; background: transparent; color: white; border: none;">$105.48</td>
+                            <td style="text-align: right; padding: 15px 10px; font-size: 14px; background: transparent; color: rgba(255,255,255,0.7); border: none;">Stable</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box">
+                <strong>Key Insight:</strong> The drop in ROAS from 2.75x to 2.20x is expected as we transition away from Black Friday promotional periods. The positive news is CTR has improved 22% indicating better creative engagement. The priority now is ruthless budget reallocation: cutting the 18.06 ABO Test and underperformers, and channeling funds to All Time Buyers (5.01x ROAS) and the top performing creatives identified below.
+            </div>
+        </div>
+
+        <!-- SLIDE 3: CAMPAIGN PERFORMANCE -->
+        <div class="slide" id="campaign-performance">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Campaign Performance Analysis</h2>
+                <p class="subtitle">Active Campaigns: Nov 9 to Dec 8, 2025</p>
+            </div>
+
+            <h3>Campaign Performance Overview</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>Revenue</th>
+                        <th>ROAS</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>18.03 | Retargeting</strong></td>
+                        <td>$8,215</td>
+                        <td>230</td>
+                        <td>$35.72</td>
+                        <td>$29,252</td>
+                        <td><strong>3.56x</strong></td>
+                        <td><span class="status-badge status-good">Scale</span></td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>18.06 | ABO Test</strong></td>
+                        <td>$15,092</td>
+                        <td>284</td>
+                        <td>$53.14</td>
+                        <td>$24,899</td>
+                        <td><strong>1.65x</strong></td>
+                        <td><span class="status-badge status-critical">Restructure</span></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>20.10 | CBO | Best Ads</strong></td>
+                        <td>$11,288</td>
+                        <td>213</td>
+                        <td>$53.00</td>
+                        <td>$22,244</td>
+                        <td><strong>1.97x</strong></td>
+                        <td><span class="status-badge status-warning">Review</span></td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>10.11 | CBO | Winners</strong></td>
+                        <td>$11,102</td>
+                        <td>230</td>
+                        <td>$48.27</td>
+                        <td>$23,641</td>
+                        <td><strong>2.13x</strong></td>
+                        <td><span class="status-badge status-warning">Optimise</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Campaign Analysis and Actions</h3>
+
+            <div class="action-item priority-low" style="background: #d1fae5;">
+                <h4 style="color: #059669;">18.03 | Retargeting: Your Best Performing Campaign</h4>
+                <p><strong>Performance:</strong> $8,215 spend with 3.56x ROAS, $35.72 CPA, 230 purchases</p>
+                <p style="margin-top: 10px;"><strong>Why it works:</strong> This campaign targets warm audiences who have already engaged with your brand. The 5.79x frequency shows strong remarketing to qualified visitors. At 3.56x ROAS, this is above breakeven and approaching target range.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Action: Increase budget by 20 to 25% this week. Monitor frequency to ensure we do not oversaturate the audience.</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>18.06 | ABO Test: Primary Budget Drain</h4>
+                <p><strong>Performance:</strong> $15,092 spend (33% of total budget) with only 1.65x ROAS</p>
+                <p style="margin-top: 10px;"><strong>The Issue:</strong> This campaign continues to be the biggest drag on account performance. At 1.65x ROAS and $53.14 CPA, every dollar spent here is barely breaking even. It is consuming one third of total budget while delivering sub-target returns.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #dc2626;">Action: Pause all ad sets except All Time Buyers (5.01x ROAS) and ATC/IC/WV (2.12x ROAS). Reallocate $10K+ monthly to Retargeting campaign.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>20.10 | CBO | Best Ads: Needs Creative Refresh</h4>
+                <p><strong>Performance:</strong> $11,288 spend with 1.97x ROAS, $53.00 CPA</p>
+                <p style="margin-top: 10px;"><strong>Context:</strong> Despite being called Best Ads, the creatives have fatigued. The 3.56x frequency suggests audience overlap with Retargeting. Need fresh creative variations or consolidation.</p>
+                <p style="margin-top: 15px; font-weight: bold; color: #f59e0b;">Action: Review individual ad performance. Pause ads below 2.0x ROAS. Test 3 new static variations based on Restock and Image - Free Delivery formats.</p>
+            </div>
+
+            <div class="insight-box">
+                <strong>Budget Reallocation Strategy:</strong> Currently 33% of budget goes to the underperforming ABO Test. By shifting this to Retargeting (3.56x) and scaling the All Time Buyers ad set (5.01x), we project blended ROAS improvement of 0.5 to 0.8x within 14 days without additional spend.
+            </div>
+        </div>
+
+        <!-- SLIDE 4: AD SET PERFORMANCE -->
+        <div class="slide" id="adset-performance">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Ad Set Performance Deep Dive</h2>
+                <p class="subtitle">Top and Bottom Performers</p>
+            </div>
+
+            <h3>Top Performing Ad Sets (by ROAS)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Set</th>
+                        <th>Campaign</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>All Time Buyers</strong></td>
+                        <td>18.03 | Retargeting</td>
+                        <td>$4,094</td>
+                        <td>135</td>
+                        <td>$30.32</td>
+                        <td><span class="status-badge status-good">5.01x</span></td>
+                        <td>Scale aggressively</td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>ATC/IC/WV (pf) - 60</strong></td>
+                        <td>18.03 | Retargeting</td>
+                        <td>$4,121</td>
+                        <td>95</td>
+                        <td>$43.38</td>
+                        <td><span class="status-badge status-good">2.12x</span></td>
+                        <td>Scale moderately</td>
+                    </tr>
+                    <tr>
+                        <td><strong>10.11 | Winners</strong></td>
+                        <td>10.11 | CBO</td>
+                        <td>$11,102</td>
+                        <td>230</td>
+                        <td>$48.27</td>
+                        <td><span class="status-badge status-warning">2.13x</span></td>
+                        <td>Optimise creatives</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Best Ads</strong></td>
+                        <td>20.10 | CBO</td>
+                        <td>$11,288</td>
+                        <td>213</td>
+                        <td>$53.00</td>
+                        <td><span class="status-badge status-warning">1.97x</span></td>
+                        <td>Creative refresh</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>14.11 | 2-min influencer</strong></td>
+                        <td>18.06 | ABO Test</td>
+                        <td>$4,516</td>
+                        <td>98</td>
+                        <td>$46.08</td>
+                        <td><span class="status-badge status-warning">1.83x</span></td>
+                        <td>Test shorter cuts</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Underperforming Ad Sets (Requiring Action)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fecaca;">
+                        <td><strong>05.11 | Version2 - R</strong></td>
+                        <td>$6,448</td>
+                        <td>117</td>
+                        <td>$55.11</td>
+                        <td><span class="status-badge status-critical">1.62x</span></td>
+                        <td>Pause immediately</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>05.11 | 3 Tips - R</strong></td>
+                        <td>$3,890</td>
+                        <td>69</td>
+                        <td>$56.38</td>
+                        <td><span class="status-badge status-critical">1.60x</span></td>
+                        <td>Pause immediately</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>05.11 | Marionete Lines - R</strong></td>
+                        <td>$127</td>
+                        <td>0</td>
+                        <td>N/A</td>
+                        <td><span class="status-badge status-critical">0x</span></td>
+                        <td>Already paused</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>05.11 | Live - R</strong></td>
+                        <td>$111</td>
+                        <td>0</td>
+                        <td>N/A</td>
+                        <td><span class="status-badge status-critical">0x</span></td>
+                        <td>Already paused</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Ad Set Strategy Summary</h3>
+            <div class="two-column">
+                <div>
+                    <div class="cro-box">
+                        <h4 style="color: #059669; margin-top: 0;">Scale These Ad Sets</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li><strong>All Time Buyers:</strong> 5.01x ROAS at $30.32 CPA. Increase budget 30%</li>
+                            <li><strong>ATC/IC/WV (pf) - 60:</strong> 2.12x ROAS, solid retargeting. Increase 20%</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-size: 14px;"><strong>Combined potential:</strong> Additional $2,500/week spend at 3.5x+ ROAS</p>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: #fef2f2; padding: 20px; border-radius: 8px; border-left: 4px solid #dc2626;">
+                        <h4 style="color: #dc2626; margin-top: 0;">Pause These Ad Sets</h4>
+                        <ul style="margin-left: 20px; font-size: 14px;">
+                            <li><strong>05.11 | Version2 - R:</strong> 1.62x ROAS, $6,448 wasted</li>
+                            <li><strong>05.11 | 3 Tips - R:</strong> 1.60x ROAS, educational content not converting</li>
+                            <li><strong>All inactive ad sets:</strong> Clean up account structure</li>
+                        </ul>
+                        <p style="margin-top: 15px; font-size: 14px;"><strong>Budget recovered:</strong> $10,338 to reallocate</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <strong>Retargeting Dominance:</strong> Your All Time Buyers ad set at 5.01x ROAS proves that repeat customer targeting is your highest ROI activity. This validates the LTV analysis from the audit. Priority is to scale retargeting while fixing the leaky prospecting campaigns.
+            </div>
+        </div>
+
+        <!-- SLIDE 5: CREATIVE PERFORMANCE -->
+        <div class="slide" id="creative-performance">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-meta">META ADS</span> Creative Performance Analysis</h2>
+                <p class="subtitle">Top Ads by ROAS and Spend</p>
+            </div>
+
+            <h3>Top Performing Creatives</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Name</th>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>CPA</th>
+                        <th>ROAS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Restock new</strong></td>
+                        <td>All Time Buyers</td>
+                        <td>$2,882</td>
+                        <td>97</td>
+                        <td>$29.71</td>
+                        <td><span class="status-badge status-good">5.62x</span></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Restock</strong></td>
+                        <td>All Time Buyers</td>
+                        <td>$1,211</td>
+                        <td>38</td>
+                        <td>$31.88</td>
+                        <td><span class="status-badge status-good">3.56x</span></td>
+                    </tr>
+                    <tr style="background: #d1fae5;">
+                        <td><strong>Image - Free Delivery</strong></td>
+                        <td>ATC/IC/WV (pf) - 60</td>
+                        <td>$2,324</td>
+                        <td>65</td>
+                        <td>$35.75</td>
+                        <td><span class="status-badge status-good">2.55x</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Milk</strong></td>
+                        <td>10.11 | Winners</td>
+                        <td>$1,630</td>
+                        <td>43</td>
+                        <td>$37.92</td>
+                        <td><span class="status-badge status-warning">2.30x</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>New Insta</strong></td>
+                        <td>10.11 | Winners</td>
+                        <td>$6,664</td>
+                        <td>136</td>
+                        <td>$49.00</td>
+                        <td><span class="status-badge status-warning">2.33x</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>3 tips - Copy</strong></td>
+                        <td>Best Ads</td>
+                        <td>$3,819</td>
+                        <td>76</td>
+                        <td>$50.25</td>
+                        <td><span class="status-badge status-warning">2.09x</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Underperforming Creatives (Pause or Replace)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ad Name</th>
+                        <th>Ad Set</th>
+                        <th>Spend</th>
+                        <th>Purchases</th>
+                        <th>ROAS</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #fecaca;">
+                        <td><strong>SAMPLE 2 W HOOK V2</strong></td>
+                        <td>05.11 | Version2 - R</td>
+                        <td>$3,713</td>
+                        <td>64</td>
+                        <td><span class="status-badge status-critical">1.46x</span></td>
+                        <td>Pause</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>3 tips</strong></td>
+                        <td>05.11 | 3 Tips - R</td>
+                        <td>$3,890</td>
+                        <td>69</td>
+                        <td><span class="status-badge status-critical">1.60x</span></td>
+                        <td>Pause</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>SAMPLE 1 W HOOK</strong></td>
+                        <td>05.11 | Version2 - R</td>
+                        <td>$2,720</td>
+                        <td>53</td>
+                        <td><span class="status-badge status-critical">1.84x</span></td>
+                        <td>Pause</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>2-min Influencer</strong></td>
+                        <td>14.11 | 2-min influencer</td>
+                        <td>$4,516</td>
+                        <td>98</td>
+                        <td><span class="status-badge status-critical">1.83x</span></td>
+                        <td>Test shorter cuts</td>
+                    </tr>
+                    <tr style="background: #fecaca;">
+                        <td><strong>Vid Influencer</strong></td>
+                        <td>10.11 | Winners</td>
+                        <td>$1,439</td>
+                        <td>27</td>
+                        <td><span class="status-badge status-critical">1.63x</span></td>
+                        <td>Pause</td>
+                    </tr>
+                    <tr style="background: #fef3c7;">
+                        <td><strong>New Insta 2</strong></td>
+                        <td>10.11 | Winners</td>
+                        <td>$1,214</td>
+                        <td>22</td>
+                        <td><span class="status-badge status-warning">1.58x</span></td>
+                        <td>Pause</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Creative Insights</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669;">What Is Working:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li><strong>Restock messaging:</strong> Both Restock ads crushing it at 3.5x to 5.6x ROAS. Urgency and scarcity resonates with repeat buyers.</li>
+                        <li><strong>Static images with offers:</strong> Image - Free Delivery at 2.55x outperforms video content</li>
+                        <li><strong>Simple, direct creatives:</strong> Product focused imagery beats educational content</li>
+                        <li><strong>CPAs under $35:</strong> All top performers maintain efficient acquisition costs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #dc2626;">What Is Not Working:</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li><strong>Long form influencer video:</strong> 2-min Influencer at 1.83x is too long for cold traffic</li>
+                        <li><strong>Educational 3 Tips format:</strong> Consistently underperforming at 1.6x ROAS</li>
+                        <li><strong>Sample hook variations:</strong> Version2 hooks not resonating with audience</li>
+                        <li><strong>Vid Influencer content:</strong> Generic influencer content not converting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="insight-box">
+                <strong>Creative Strategy:</strong> The data strongly supports static image creatives with direct offers (Restock, Free Delivery) over educational video content. Recommendation: Create 3 to 5 new static variations using the Restock format: product image, urgency copy, clear CTA. Test against cold audiences to improve TOF efficiency.
+            </div>
+        </div>
+
+        <!-- SLIDE 6: ACTIONS COMPLETED -->
+        <div class="slide" id="actions-completed">
+            <div class="slide-header">
+                <h2>Actions Completed This Week</h2>
+                <p class="subtitle">Progress Since Last Report</p>
+            </div>
+
+            <h3>Audit Implementation Progress</h3>
+
+            <div class="action-item priority-low" style="background: #d1fae5;">
+                <h4 style="color: #059669;">Completed: Underperforming Ads Paused</h4>
+                <p>As discussed on the December 2nd call and Slack communications, the following underperformers have been turned off:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Three Tips variations (sub 1.6x ROAS)</li>
+                    <li>Vid Influencer (1.63x ROAS)</li>
+                    <li>Creative Five (declining performance)</li>
+                    <li>Meta 2B and Meta 3 (underperforming)</li>
+                    <li>Marionete Lines and Live content (sub breakeven)</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #059669;">Budget recovered: Approximately $300 to $400 per day redirected to winners</p>
+            </div>
+
+            <div class="action-item priority-low" style="background: #d1fae5;">
+                <h4 style="color: #059669;">Completed: Black Friday to Evergreen Transition</h4>
+                <p>Account has been transitioned from BFCM promotional structure back to evergreen campaigns. Sale messaging removed, standard offers restored.</p>
+            </div>
+
+            <div class="action-item priority-low" style="background: #d1fae5;">
+                <h4 style="color: #059669;">Completed: Checkout Improvement</h4>
+                <p>Lea implemented the checkout page redesign on December 4th. New checkout now includes:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Free cosmetic bag incentive displayed</li>
+                    <li>PayPal and multiple payment options prominent</li>
+                    <li>Cleaner layout and improved UX</li>
+                </ul>
+                <p style="margin-top: 10px;"><strong>Note:</strong> Trust badges near Pay button still require Shopify Plus. Working on alternatives.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4 style="color: #f59e0b;">In Progress: Winner Scaling</h4>
+                <p>Identified top performers for scaling:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Artboard 2.jpg variations (strong CTR)</li>
+                    <li>Better 2B (consistent performance)</li>
+                    <li>Retargeting campaigns (3.56x to 5.01x ROAS)</li>
+                </ul>
+                <p style="margin-top: 10px;">Budget increases being implemented this week.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4 style="color: #f59e0b;">In Progress: Email Marketing Setup</h4>
+                <p>Requested introduction to email marketing team via Ryan. Awaiting assignment of email specialist to review Klaviyo flows and retention strategy.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4 style="color: #f59e0b;">In Progress: Apple Pay Integration</h4>
+                <p>Lea has contacted third party payment provider. Awaiting resolution to enable Apple Pay on checkout for faster mobile conversions.</p>
+            </div>
+
+            <h3 style="margin-top: 40px;">Outstanding Items</h3>
+            <ul>
+                <li><strong>Creative Team Meeting:</strong> To be scheduled for script development and creative direction</li>
+                <li><strong>PageSpeed Optimisation:</strong> IT team reviewing recommendations. Apps audit in this report.</li>
+                <li><strong>Shopify Plus Decision:</strong> Confirmed not recommended at current revenue level ($2,300/month cost not justified)</li>
+            </ul>
+        </div>
+
+        <!-- SLIDE 7: THIS WEEK PLAN -->
+        <div class="slide" id="this-week-plan">
+            <div class="slide-header">
+                <h2>This Week Action Plan</h2>
+                <p class="subtitle">December 9 to 15, 2025</p>
+            </div>
+
+            <div style="background: #dc2626; color: white; padding: 20px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="color: white; margin-top: 0;">IMMEDIATE ACTIONS (Today)</h3>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>1. Pause Remaining Underperformers</h4>
+                <p>The following ad sets and ads will be paused today:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>05.11 | Version2 - R:</strong> $6,448 at 1.62x ROAS. Immediate pause.</li>
+                    <li><strong>05.11 | 3 Tips - R:</strong> $3,890 at 1.60x ROAS. Immediate pause.</li>
+                    <li><strong>SAMPLE 2 W HOOK V2:</strong> 1.46x ROAS. Pause.</li>
+                    <li><strong>Vid Influencer:</strong> 1.63x ROAS. Pause.</li>
+                    <li><strong>New Insta 2:</strong> 1.58x ROAS. Pause.</li>
+                </ul>
+                <p style="margin-top: 15px; font-weight: bold; color: #dc2626;">Expected savings: $350/day to reallocate</p>
+            </div>
+
+            <div class="action-item priority-high">
+                <h4>2. Scale Winners</h4>
+                <p>Budget increases to be implemented:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>All Time Buyers:</strong> Increase from $200/day to $260/day (+30%)</li>
+                    <li><strong>ATC/IC/WV (pf) - 60:</strong> Increase from $200/day to $240/day (+20%)</li>
+                    <li><strong>18.03 | Retargeting (campaign level):</strong> Ensure no daily cap restricting spend</li>
+                </ul>
+            </div>
+
+            <div style="background: #f59e0b; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
+                <h3 style="color: white; margin-top: 0;">MID-WEEK ACTIONS (Wednesday to Friday)</h3>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>3. Creative Testing</h4>
+                <p>Launch 3 new static image variations:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Restock format with different product hero (Mini Dermaroller)</li>
+                    <li>Free Delivery format with urgency countdown</li>
+                    <li>Before/After static with direct CTA</li>
+                </ul>
+                <p style="margin-top: 10px;">Test in BOF and MOF placements first, then scale to TOF if performing above 2.5x.</p>
+            </div>
+
+            <div class="action-item priority-medium">
+                <h4>4. 18.06 ABO Test Restructure</h4>
+                <p>This campaign needs fundamental restructuring:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Keep only All Time Buyers and ATC/IC/WV ad sets active</li>
+                    <li>Pause all other ad sets within this campaign</li>
+                    <li>Consider consolidating into Retargeting campaign structure</li>
+                </ul>
+            </div>
+
+            <div style="background: #10b981; color: white; padding: 20px; border-radius: 8px; margin: 30px 0;">
+                <h3 style="color: white; margin-top: 0;">END OF WEEK REVIEW</h3>
+            </div>
+
+            <div class="action-item priority-low">
+                <h4>5. Performance Review</h4>
+                <p>By Friday, review:</p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Impact of budget reallocation on blended ROAS</li>
+                    <li>New creative test performance</li>
+                    <li>Checkout conversion rate changes post-redesign</li>
+                    <li>Prepare next week strategy based on data</li>
+                </ul>
+            </div>
+
+            <h3 style="margin-top: 40px;">Target Metrics for Next Report</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Target Blended ROAS</div>
+                    <div class="metric-value">2.8x</div>
+                    <div class="metric-change">Up from 2.20x</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Target CPA</div>
+                    <div class="metric-value">Under $42</div>
+                    <div class="metric-change">Down from $47.75</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Budget Efficiency</div>
+                    <div class="metric-value">+25%</div>
+                    <div class="metric-change">More spend on winners</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">New Creatives Live</div>
+                    <div class="metric-value">3</div>
+                    <div class="metric-change">Testing by Friday</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 8: SHOPIFY APPS AUDIT -->
+        <div class="slide" id="shopify-apps">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-tech">Technical</span> Shopify Apps Audit</h2>
+                <p class="subtitle">App Analysis for Page Speed Optimisation</p>
+            </div>
+
+            <div style="background: #fef3c7; border-left: 6px solid #f59e0b; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #92400e;">Why App Audit Matters</h3>
+                <p style="font-size: 16px; line-height: 1.6; color: #92400e;">Each Shopify app adds JavaScript and CSS to your store, slowing page load times. With your PageSpeed score at 39/100 on mobile and Core Web Vitals failing, app bloat is a primary contributor. Every 1 second delay costs approximately 7% in conversions. Based on your current traffic, this could represent $15K to $25K in lost monthly revenue.</p>
+            </div>
+
+            <h3>Current Apps Installed (Total Monthly Cost: $423+)</h3>
+
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669; margin-bottom: 15px;">Essential Apps (Keep)</h4>
+                    
+                    <div class="app-card keep">
+                        <div class="app-name">TripleWhale</div>
+                        <div class="app-cost">Status: Unsupported (needs attention)</div>
+                        <div class="app-recommendation"><strong>Action:</strong> KEEP but resolve unsupported status. Essential for attribution tracking. Contact Triple Whale support.</div>
+                    </div>
+
+                    <div class="app-card keep">
+                        <div class="app-name">BYOB (Build Your Own Bundle)</div>
+                        <div class="app-cost">$22.00/month</div>
+                        <div class="app-recommendation"><strong>Action:</strong> KEEP. Critical for AOV increases and bundle functionality. Drives higher order values.</div>
+                    </div>
+
+                    <div class="app-card keep">
+                        <div class="app-name">Bold Subscriptions</div>
+                        <div class="app-cost">$49.99/month + usage fees</div>
+                        <div class="app-recommendation"><strong>Action:</strong> KEEP. Essential for subscription revenue and LTV growth. Aligns with repeat buyer strategy.</div>
+                    </div>
+
+                    <div class="app-card keep">
+                        <div class="app-name">One Click Upsell</div>
+                        <div class="app-cost">Usage fees</div>
+                        <div class="app-recommendation"><strong>Action:</strong> KEEP. Post-purchase upsells increase AOV without impacting page speed.</div>
+                    </div>
+
+                    <div class="app-card keep">
+                        <div class="app-name">Hulk GDPR Cookie Bar</div>
+                        <div class="app-cost">$10.00/month</div>
+                        <div class="app-recommendation"><strong>Action:</strong> KEEP. Legal compliance required. Minimal speed impact.</div>
+                    </div>
+
+                    <div class="app-card keep">
+                        <div class="app-name">Checkout Blocks</div>
+                        <div class="app-cost">Free (likely)</div>
+                        <div class="app-recommendation"><strong>Action:</strong> KEEP. Enables checkout customisation. Essential for CRO improvements.</div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: #f59e0b; margin-bottom: 15px;">Review Apps (Evaluate ROI)</h4>
+
+                    <div class="app-card review">
+                        <div class="app-name">Notify Me!</div>
+                        <div class="app-cost">$87.37/month + usage fees</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. High cost. Check if back-in-stock notifications justify expense. Consider cheaper alternative if usage is low.</div>
+                    </div>
+
+                    <div class="app-card review">
+                        <div class="app-name">Replo Landing Page Builder</div>
+                        <div class="app-cost">$99.00/month</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. Are you actively using custom landing pages? If not, consider pausing. Can create pages natively or with theme.</div>
+                    </div>
+
+                    <div class="app-card review">
+                        <div class="app-name">Data Feed Watch Shopping Feeds</div>
+                        <div class="app-cost">$64.00/month + usage fees</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. Only needed if running Google Shopping or other feed-based ads. Confirm if actively used.</div>
+                    </div>
+
+                    <div class="app-card review">
+                        <div class="app-name">Affiliatly Affiliate Marketing</div>
+                        <div class="app-cost">$24.00/month</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. Is affiliate program active and profitable? If dormant, pause to save costs.</div>
+                    </div>
+
+                    <h4 style="color: #dc2626; margin-top: 30px; margin-bottom: 15px;">Potentially Remove (Low Impact or Redundant)</h4>
+
+                    <div class="app-card remove">
+                        <div class="app-name">Zipify Pages Builder</div>
+                        <div class="app-cost">$19.00/month</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REMOVE if you have Replo. Redundant page builder. Pick one or use neither.</div>
+                    </div>
+
+                    <div class="app-card remove">
+                        <div class="app-name">Dr Free Gift</div>
+                        <div class="app-cost">$9.99/month</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. Can this be replaced with native Shopify discount functionality?</div>
+                    </div>
+
+                    <div class="app-card review">
+                        <div class="app-name">TikTok</div>
+                        <div class="app-cost">Free (Action needed status)</div>
+                        <div class="app-recommendation"><strong>Action:</strong> Resolve action needed. If not running TikTok ads, consider removing to reduce script load.</div>
+                    </div>
+
+                    <div class="app-card review">
+                        <div class="app-name">Collabs</div>
+                        <div class="app-cost">Free</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. Shopify Collabs for creator partnerships. Remove if not actively using.</div>
+                    </div>
+
+                    <div class="app-card review">
+                        <div class="app-name">Marketplace Connect</div>
+                        <div class="app-cost">Free</div>
+                        <div class="app-recommendation"><strong>Action:</strong> REVIEW. For multi-channel selling. Remove if not using marketplaces.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="insight-box" style="margin-top: 30px;">
+                <strong>Potential Monthly Savings:</strong> By removing or pausing Zipify ($19), reducing Notify Me to cheaper alternative ($50 savings), and pausing unused apps, you could save $80 to $150/month while significantly improving page speed. More importantly, removing script bloat could improve mobile conversion rate by 3 to 8%.
+            </div>
+        </div>
+
+        <!-- SLIDE 9: BOOSTER THEME ANALYSIS -->
+        <div class="slide" id="booster-theme">
+            <div class="slide-header">
+                <h2><span class="platform-badge badge-tech">Technical</span> Booster Theme Analysis</h2>
+                <p class="subtitle">Assessment for Gin Amber Beauty</p>
+            </div>
+
+            <div style="background: #f0f9ff; border-left: 6px solid #3b82f6; padding: 25px; border-radius: 8px; margin-bottom: 30px;">
+                <h3 style="margin-top: 0; color: #1d4ed8;">What is Booster Theme?</h3>
+                <p style="font-size: 16px; line-height: 1.6; color: #1d4ed8;">Booster Theme is a third-party Shopify theme specifically engineered for speed and conversions. It claims to be the fastest Shopify theme on the market with 40+ built-in conversion tools that eliminate the need for multiple apps. Used by over 45,000 Shopify merchants.</p>
+            </div>
+
+            <h3>Key Features and Benefits</h3>
+            <div class="two-column">
+                <div>
+                    <h4 style="color: #059669;">Speed Optimisation</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li><strong>Automatic image optimisation:</strong> Serves optimal format based on device</li>
+                        <li><strong>CSS-based interactions:</strong> Reduces JavaScript dependency</li>
+                        <li><strong>Modular JavaScript:</strong> Only loads components needed</li>
+                        <li><strong>Zero external dependencies:</strong> All features built natively</li>
+                        <li><strong>Sub-1 second loading:</strong> Claimed 0.9s load time on tests</li>
+                    </ul>
+
+                    <h4 style="color: #059669; margin-top: 20px;">Built-in Conversion Tools</h4>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Countdown timers (no app needed)</li>
+                        <li>Urgency and scarcity elements</li>
+                        <li>Cross-sell and upsell functionality</li>
+                        <li>Sticky add-to-cart</li>
+                        <li>Trust badges and social proof</li>
+                        <li>Quick view for products</li>
+                        <li>Mobile-optimised checkout flows</li>
+                        <li>Geo-targeted content</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #162642;">Pricing</h4>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                        <p><strong>Yearly License:</strong> $248/year</p>
+                        <ul style="margin-left: 20px; font-size: 14px; margin-top: 10px;">
+                            <li>Unlimited features</li>
+                            <li>Continuous updates</li>
+                            <li>Technical support</li>
+                            <li>Mobile optimisation</li>
+                        </ul>
+                    </div>
+                    <div style="background: #f8fafc; padding: 20px; border-radius: 8px;">
+                        <p><strong>Lifetime License:</strong> $398 (one-time)</p>
+                        <ul style="margin-left: 20px; font-size: 14px; margin-top: 10px;">
+                            <li>All yearly features</li>
+                            <li>Lifetime updates</li>
+                            <li>Best value long-term</li>
+                        </ul>
+                    </div>
+
+                    <h4 style="color: #059669; margin-top: 20px;">App Cost Savings</h4>
+                    <p style="font-size: 14px;">Booster claims to save $150 to $280/month in app fees by replacing:</p>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li>Countdown timer apps ($12/month)</li>
+                        <li>Urgency/scarcity apps ($20/month)</li>
+                        <li>Sticky cart apps ($10/month)</li>
+                        <li>Page speed optimiser apps ($30/month)</li>
+                        <li>Upsell/cross-sell apps ($30/month)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Recommendation for Gin Amber Beauty</h3>
+
+            <div class="action-item priority-medium">
+                <h4 style="color: #f59e0b;">Verdict: WORTH CONSIDERING, but not urgent</h4>
+                <p style="margin-top: 10px;"><strong>Pros for your situation:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Would significantly improve mobile PageSpeed (currently 39/100)</li>
+                    <li>Could replace Zipify and Replo page builders (save $118/month)</li>
+                    <li>Built-in urgency tools align with your best performing Restock creative strategy</li>
+                    <li>58 preset stores, some skincare-specific</li>
+                    <li>Mobile-first design matches your 70%+ mobile traffic</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Considerations:</strong></p>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li>Theme migration requires developer time and testing</li>
+                    <li>Learning curve for team to manage new theme</li>
+                    <li>Current checkout improvements just implemented; measure impact first</li>
+                    <li>BYOB, Bold Subscriptions, and One Click Upsell still needed (not replaced by theme)</li>
+                </ul>
+            </div>
+
+            <div class="cro-box">
+                <h4 style="color: #059669; margin-top: 0;">ROI Calculation</h4>
+                <p><strong>Investment:</strong> $398 one-time (lifetime) or $248/year</p>
+                <p style="margin-top: 10px;"><strong>Potential savings:</strong></p>
+                <ul style="margin-left: 20px; font-size: 14px;">
+                    <li>Remove Zipify + Replo: $118/month = $1,416/year</li>
+                    <li>Improved conversion from speed: 3 to 8% lift on $200K monthly revenue = $6K to $16K/month</li>
+                </ul>
+                <p style="margin-top: 15px;"><strong>Recommendation:</strong> If planning a website refresh for 2026, seriously consider Booster Theme as part of that project. For immediate term, focus on removing unused apps first, then evaluate theme migration for Q1 2026.</p>
+            </div>
+
+            <h3 style="margin-top: 30px;">Alternative: Booster Speed Optimisation Service</h3>
+            <p>If theme migration is too disruptive, Booster offers a standalone speed optimisation service:</p>
+            <ul style="margin-left: 20px;">
+                <li><strong>Cost:</strong> $999 one-time</li>
+                <li><strong>Timeframe:</strong> Less than 7 days</li>
+                <li><strong>Guarantee:</strong> 25% speed improvement or money back</li>
+                <li><strong>Includes:</strong> Code audit, render-blocking fixes, image optimisation</li>
+            </ul>
+            <p style="margin-top: 10px;">This could be a good middle-ground option to improve speed without full theme migration.</p>
+        </div>
+
+        <!-- SLIDE 10: NEXT STEPS -->
+        <div class="slide" id="next-steps">
+            <div class="slide-header">
+                <h2>Next Steps and Summary</h2>
+            </div>
+
+            <h3>Priority Actions This Week</h3>
+            <div style="background: #dc2626; color: white; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <h4 style="color: white; margin-top: 0; margin-bottom: 15px;">CRITICAL (Today)</h4>
+                <ol style="margin-left: 20px; line-height: 2;">
+                    <li>Pause 05.11 | Version2 - R ad set ($6,448 at 1.62x ROAS)</li>
+                    <li>Pause 05.11 | 3 Tips - R ad set ($3,890 at 1.60x ROAS)</li>
+                    <li>Pause Vid Influencer and New Insta 2 creatives</li>
+                    <li>Increase All Time Buyers budget by 30%</li>
+                    <li>Increase ATC/IC/WV (pf) - 60 budget by 20%</li>
+                </ol>
+            </div>
+
+            <div class="two-column" style="margin-top: 30px;">
+                <div>
+                    <h4 style="color: #f59e0b;">This Week (by Friday)</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Launch 3 new static image creatives</li>
+                        <li>Restructure 18.06 ABO Test campaign</li>
+                        <li>Review checkout conversion rate post-redesign</li>
+                        <li>Schedule creative team meeting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #10b981;">For Client Team (Gin and Lea)</h4>
+                    <ul style="margin-left: 20px;">
+                        <li>Review Shopify apps audit recommendations</li>
+                        <li>Discuss Booster Theme consideration for Q1 2026</li>
+                        <li>Chase Apple Pay integration with payment provider</li>
+                        <li>Confirm creative team availability for meeting</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Expected Outcomes (Next 7 Days)</h3>
+            <div class="metric-grid">
+                <div class="metric-card">
+                    <div class="metric-label">Current Blended ROAS</div>
+                    <div class="metric-value">2.20x</div>
+                    <div class="metric-change">Nov 9 to Dec 8</div>
+                </div>
+                <div class="metric-card accent">
+                    <div class="metric-label">Target Blended ROAS</div>
+                    <div class="metric-value">2.8x</div>
+                    <div class="metric-change">By Dec 16 report</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-label">Current CPA</div>
+                    <div class="metric-value">$47.75</div>
+                    <div class="metric-change">Too high</div>
+                </div>
+                <div class="metric-card success">
+                    <div class="metric-label">Target CPA</div>
+                    <div class="metric-value">Under $42</div>
+                    <div class="metric-change">10% improvement</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Roadmap Alignment</h3>
+            <p>Per the original audit roadmap, we are in <strong>Phase 1: Stabilisation (Weeks 1 to 4)</strong>. Progress is on track:</p>
+            <ul style="margin-left: 20px;">
+                <li><strong>Week 1 (Complete):</strong> Audit delivered, underperformers identified, initial pauses actioned</li>
+                <li><strong>Week 2 (Current):</strong> Aggressive pruning, budget reallocation, checkout improvements live</li>
+                <li><strong>Week 3 to 4:</strong> Creative testing, campaign restructure, measure CRO impact</li>
+            </ul>
+            <p style="margin-top: 15px;">Target: Achieve 3.0 to 3.5x ROAS by end of Phase 1 (December 23rd), setting foundation for Phase 2 scaling in January.</p>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: #162642; border-radius: 12px;">
+                <img src="https://res.cloudinary.com/dcnabm5nc/image/upload/v1754585626/lead-guru-new-logo-W-450_oyvumx.webp" alt="Lead Guru Logo" style="width: 180px;">
+                <p style="color: rgba(255,255,255,0.8); margin-top: 15px;">Weekly Report: December 9, 2025</p>
+                <p style="color: rgba(255,255,255,0.6); margin-top: 5px; font-size: 14px;">Gin Amber Beauty | Meta Ads Management</p>
+                <p style="color: #cc5b27; margin-top: 15px; font-size: 14px;">Next Report: December 16, 2025</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
